@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://git.fbcf.xyz/'
 languageCode = 'en-us'
 title = 'Felix Bowyer'
 theme = 'archie-efbicief'
