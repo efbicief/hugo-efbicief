@@ -31,16 +31,21 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All posts"
-url = "/posts"
+name = "Projects"
+url = "/tags/project"
 weight = 2
 
 [[menu.main]]
-name = "About"
-url = "/about"
+name = "Blog posts"
+url = "/tags/blog"
 weight = 3
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 4
 
 [[menu.main]]
 name = "Tags"
 url = "/tags"
-weight = 4
+weight = 5
