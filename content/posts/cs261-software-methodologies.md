@@ -2,7 +2,7 @@
 title: "Software Methodologies"
 date: 2022-05-19T09:37:41+01:00
 draft: false
-tags: [ "CS261", "Software Engineering", "Notes" ]
+tags: [ "CS261", "Software Engineering", "Methodologies", "Notes" ]
 ---
 Two types: Plan-driven and Agile.\
 All processes involve:
@@ -68,6 +68,7 @@ Stages of requirements engineering:
 - Stakeholders give feedback at every stage
 - **Manifesto**: Customer involvement, Incremental delivery, People not process, Embracing change, Maintain simplicity
 - Less focus on documentation, needs heavy customer involvement and small, experienced teams
+- Can produce prototypes & Minimum Viable Products
 
 All agile methodologies share these disadvantages.
 
