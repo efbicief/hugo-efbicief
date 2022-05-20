@@ -1,6 +1,6 @@
 ---
 title: "Human-computer interaction"
-date: 2022-05-20T02:32:22+01:00
+date: 2022-05-20T03:53:24+01:00
 draft: false
 tags: [ "CS261", "Software Engineering", "Interaction", "Notes" ]
 ---
