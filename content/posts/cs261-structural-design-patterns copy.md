@@ -18,3 +18,21 @@ tags: [ "CS261", "Software Engineering", "Implementation", "Patterns", "Notes" ]
 # Prototype
 - Start by making one instance of an object you need many copies of.
 - Anytime you need a new one, `clone()` the original prototype.
+
+# Proxy
+Placeholders for objects, redirects to the correct resource. Comes with added bonuses.
+- Virtual proxy: Lazy loading - delays loading the resource until nessecary
+- Protection proxy: Provides access control, eg. Chip & PIN as a proxy for money
+- Remote proxy: Also handles communications to access a remote resource
+- Logging proxy: Keeps track of accesses and requests in a service object
+- Caching proxy: Saves results from resource and keeps them to avoid repeated resource queries
+- Smart referencing: Garbage collection - remove heavy service objects if unused for some time
+
+# Decorators
+- Adds new behaviour to an object at runtime
+- Wrapper for existing objects - eg. to change colour, wrap in `redColourWrapper(obj)`
+
+# Flyweight
+- Takes common resource out as it's own object
+- Other objects now access just the flyweight object
+- Useful for eg. game textures, where many objects need the same texture, saves on memory
