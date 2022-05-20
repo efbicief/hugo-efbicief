@@ -52,3 +52,5 @@ Consider:
 - Drawbacks of *not* making a change
 - Affected users
 - Product release cycle- agile methodologies nessecitate updates as part of the release cycle
+
+[All topics ⟶](/posts/cs261-index/)

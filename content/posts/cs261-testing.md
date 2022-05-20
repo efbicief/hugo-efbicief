@@ -63,3 +63,5 @@ Originally introduced with XP, gained popularity across the board.
 - Acceptance: Customer deciding whether the system is ready to be deployed
 
 {{<figure src="/acceptance.png" height=150 title="Acceptance testing flow">}}
+
+[All topics ⟶](/posts/cs261-index/)

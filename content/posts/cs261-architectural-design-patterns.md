@@ -35,3 +35,5 @@ Linear data pathways formed, components process & filter the data to correct out
 Focuses on interpreting user actions (controller -> model), updating the data (model), and presenting it to the user (view).
 
 {{<figure src="/mvc.png" height=300 title="Model-view-controller architecture">}}
+
+[All topics ⟶](/posts/cs261-index/)

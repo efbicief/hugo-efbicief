@@ -91,3 +91,5 @@ Object naming schemes:
 | Named object            | Name:Class    | Smith:Patient |
 | Anonymous object        | :Class        | :Patient      |
 | Object of unknown class | Name          | Smith         |
+
+[All topics ⟶](/posts/cs261-index/)

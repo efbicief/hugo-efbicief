@@ -91,3 +91,5 @@ All agile methodologies share these disadvantages.
 - Good if you want to manage a project in chunks, have unstable requirements and want smaller release cycles
 
 {{<figure src="/scrum.png" height=200 title="Scrum Methodology Stages">}}
+
+[All topics ⟶](/posts/cs261-index/)

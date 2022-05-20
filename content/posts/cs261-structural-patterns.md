@@ -36,3 +36,5 @@ Placeholders for objects, redirects to the correct resource. Comes with added bo
 - Takes common resource out as it's own object
 - Other objects now access just the flyweight object
 - Useful for eg. game textures, where many objects need the same texture, saves on memory
+
+[All topics ⟶](/posts/cs261-index/)

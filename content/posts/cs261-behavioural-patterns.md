@@ -31,3 +31,5 @@ tags: [ "CS261", "Software Engineering", "Implementation", "Patterns", "Notes" ]
 - Methods to complete task implemented in seperate object
 - Original context object doesn't know details of strategies, just selects one to use
 - Good example is a graph iterator - strategies can be implemented seperately (eg. depth first, breadth first) and selected based on conditions of the graph at runtime
+
+[All topics ⟶](/posts/cs261-index/)
