@@ -36,8 +36,8 @@ url = "/tags/project"
 weight = 2
 
 [[menu.main]]
-name = "Blog posts"
-url = "/tags/blog"
+name = "Notes"
+url = "/tags/notes"
 weight = 3
 
 [[menu.main]]

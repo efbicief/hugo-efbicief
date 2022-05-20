@@ -10,4 +10,4 @@ MentorMe is an online platform for mentoring new company employees. It was creat
 
 We created 3 main components: a backend API (made with express.js), a web frontend (made with react.js), and a database (using Postgres).
 
-I mainly worked on the matching between users and mentors in the backend, and integration between frontend elements and the backend API.
+I mainly worked on the matching between users and mentors in the backend, and integration between frontend elements and the backend API. 

@@ -1,0 +1,21 @@
+{{ $text := (.Get 0) | markdownify | default "Expand" }}
+{{ $icon := (.Get 1) | default "↕" }}
+{{ $id :=  index (seq 1000 | shuffle) 0 }}
+{{ $headingId := $text | anchorize }}
+{{ $collapseIcon := partial "inline-svg" "chevron-up" }}
+{{ printf "<div id=\"%s\" class=\"md-expand\">" $headingId | htmlUnescape | safeHTML }}
+{{ printf "<label for=\"expander-%d\">" $id | htmlUnescape | safeHTML }}
+{{ printf "<div class=\"md-expand-head\">" | htmlUnescape | safeHTML }}
+{{ printf "<span>%s</span>" $text | htmlUnescape | safeHTML }}
+{{ printf "<span>%s</span>" $icon | htmlUnescape | safeHTML }}
+{{ printf "</div>" | htmlUnescape | safeHTML }}
+{{ printf "</label>" | htmlUnescape | safeHTML }}
+{{ printf "<input id=\"expander-%d\" type=\"checkbox\" class=\"hidden\" />" $id | htmlUnescape | safeHTML }}
+{{ printf "<div class=\"md-expand-content markdown-inner\">" | htmlUnescape | safeHTML }}
+{{ printf "<div class=\"md-content\">" | htmlUnescape | safeHTML }}
+{{ .Inner | safeHTML }}
+{{ printf "</div>" | htmlUnescape | safeHTML }}
+{{ printf "<label for=\"expander-%d\" class=\"tag md-collapse tooltipped tooltipped-w\" aria-label=\"Collapse '%s'\">%s</label>" $id $text $collapseIcon | htmlUnescape | safeHTML }}
+{{ printf "</div>" | htmlUnescape | safeHTML }}
+{{ printf "<div class=\"md-footer\"></div>" | htmlUnescape | safeHTML }}
+{{ printf "</div>" | htmlUnescape | safeHTML }}
