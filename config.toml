@@ -42,7 +42,7 @@ weight = 3
 
 [[menu.main]]
 name = "Notes"
-url = "/tags/notes"
+url = "/tags/index"
 weight = 3
 
 [[menu.main]]
