@@ -9,6 +9,8 @@ This is the index page for CS257 - Advanced Computer Architecture.
 - [Caches ⟶](/posts/cs257-caches/)
 - [Code optimisation (vectorisation) ⟶](/posts/cs257-optimisation/)
 - [Code optimisation (theory) ⟶](/posts/cs257-optimisation-theory/)
+- [Processor architecture ⟶](/posts/cs257-processor-architecture/)
+- [Parallel computation ⟶](/posts/cs257-parallel-computation)
 
 These notes are in no way comprehensive, but contain information that I think is most relevant to this module.
 
