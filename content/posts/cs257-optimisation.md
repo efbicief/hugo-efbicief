@@ -71,13 +71,12 @@ For this section of the notes, we will work through the following past question 
 
   #include <immintrin.h>
   int loopN = (N/4)*4; // Number of items that can be vectorised
-  __m128 zero_vec = _mm_set1_ps(0.0f); // Load value 0.0f into 128-bit vector unit
 
   for (int i = 0; i < loopN; i += 4) {
     // Write contents of zero_vec to ax, ay and az + offset i
-    _mm_store_ps(ax+i, zero_vec);
-    _mm_store_ps(ay+i, zero_vec);
-    _mm_store_ps(ax+i, zero_vec);
+    _mm_store_ps(ax+i, _mm_setzero_ps());
+    _mm_store_ps(ay+i, _mm_setzero_ps());
+    _mm_store_ps(ax+i, _mm_setzero_ps());
   }
 
   for (; i < N; i++) {
@@ -142,9 +141,44 @@ For this section of the notes, we will work through the following past question 
       _mm_store_ps(ay+i, ay_vec);
       _mm_store_ps(az+i, az_vec);
     }
+    for (; j < N; j++) {
+      float rx = x[j] - x[i];
+      float ry = y[j] - y[i];
+      float rz = z[j] - z[i];
+      float r2 = rx*rx + ry*ry + rz*rz + eps;
+      float r2inv = 1.0f / sqrt(r2);
+      float r6inv = r2inv * r2inv * r2inv;
+      float s = m[j] * r6inv;
+      ax[i] += s * rx;
+      ay[i] += s * ry;
+      az[i] += s * rz;
+    }
   }
 
+  // Cleanup
   for (; i < N; i++) {
+    for (int j = 0; j < loopN; j+=4) {
+      // Loading needed vectors (j-indexed)
+      __m128 xj_vec = _mm_load_ps(x+j);
+      __m128 yj_vec = _mm_load_ps(y+j);
+      __m128 zj_vec = _mm_load_ps(z+j);
+      __m128 m_vec = _mm_load_ps(m+j);
+      // Computation
+      __m128 rx = _mm_sub_ps(xj, xi);
+      __m128 ry = _mm_sub_ps(yj, yi);
+      __m128 rz = _mm_sub_ps(zj, zi);
+      __m128 r2 = _mm_add_ps(_mm_add_ps(_mm_mul_ps(rx, rx), _mm_mul_ps(ry, ry)), _mm_add_ps(_mm_mul_ps(rz, rz), eps_vec));
+      __m128 r2inv = _mm_invsqrt(r2);
+      __m128 r6inv = _mm_mul_ps(_mm_mul_ps(r2inv, r2inv), r2inv);
+      __m128 s = _mm_mul_ps(m_vec, r6inv);
+      ax_vec = _mm_add_ps(ax_vec, _mm_mul_ps(s, rx));
+      ay_vec = _mm_add_ps(ay_vec, _mm_mul_ps(s, ry));
+      az_vec = _mm_add_ps(az_vec, _mm_mul_ps(s, rz));
+      // Storing back into arrays
+      _mm_store_ps(ax+i, ax_vec);
+      _mm_store_ps(ay+i, ay_vec);
+      _mm_store_ps(az+i, az_vec);
+    }
     for (; j < N; j++) {
       float rx = x[j] - x[i];
       float ry = y[j] - y[i];
