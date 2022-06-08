@@ -11,6 +11,8 @@ This is the index page for CS257 - Advanced Computer Architecture.
 - [Code optimisation (theory) ⟶](/posts/cs257-optimisation-theory/)
 - [Processor architecture ⟶](/posts/cs257-processor-architecture/)
 - [Parallel computation ⟶](/posts/cs257-parallel-computation)
+- [I/O & Secondary storage ⟶](/posts/cs257-io-secondary-storage)
+- [Embedded systems ⟶](/posts/cs257-embedded-systems)
 
 These notes are in no way comprehensive, but contain information that I think is most relevant to this module.
 
