@@ -7,7 +7,7 @@ tags: [ "CS257", "Architecture", "Memory", "Notes" ]
 # Types of memory
 ## Static vs Dynamic
 - Static RAM (SRAM): Flip-flop used to store each bit. Expensive but fairly simple.
-- Dynamic RAM (DRAM): Capacitor used to store each bit, charge leaks away so refresh curcuitry needed - increases complexity. Otherwise, generally cheaper once you have the refresh circuitry, so more common.
+- Dynamic RAM (DRAM): Capacitor used to store each bit, charge leaks away so refresh circuitry needed - increases complexity. Otherwise, generally cheaper once you have the refresh circuitry, so more common.
 
 ## Chip types
 | Type                                | Read/Write                                       | Volatility   |
