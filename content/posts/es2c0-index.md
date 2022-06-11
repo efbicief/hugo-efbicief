@@ -6,6 +6,7 @@ tags: [ "ES2C0", "Electronics", "Index", "Notes" ]
 ---
 This is the index page for ES2C0 - Analogue Electronic Design.
 - [Oscillators ⟶](/posts/es2c0-oscillators/)
+- [BJT Amplifiers ⟶](/posts/es2c0-bjt-amplifiers/)
 
 These notes are in no way comprehensive, but contain information that I think is most relevant to the exam.
 
