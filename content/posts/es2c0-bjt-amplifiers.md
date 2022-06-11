@@ -21,7 +21,9 @@ $$v_{BE}=0.7v, v_{EB}=0.7v$$
 
 # DC analysis
 - We want to set up a Q-point (quiescent) to a certain specification, we do this by setting resistor values
+
 {{<figure src="/bjt4res.png" height=300 title="Voltage divider (Four Resistor) bias circuit, and it's Thevenin equivalent circuit">}}
+
 - Consider:
 $$R_{Th}=R_1||R_2, V_{Th}=V_{CC}\frac{R_2}{R_1+R_2}$$
 
@@ -33,7 +35,7 @@ $$βI_b\implies g_mV_{be}$$
   - Replace capacitors with short circuits
   - Replace DC volt sources with shorts to ground
   - Replace the BJS with the hybrid π model shown above
-- V_T is the thermal voltage (assume =25mV), g_m is the transconductance of the BJT
+- V_T is the thermal voltage (assume =25mV), g_m is the **transconductance** of the BJT
 $$g_m=\frac{I_{CQ}}{V_T}=40I_{CQ}$$
 - Internal resistance
 $$r_π=\frac{βV_T}{I_{CQ}}=\frac{β}{g_m}$$
@@ -45,7 +47,7 @@ $$R_i=R_{ib}||R_1||R_2=(r_π+R_E(1+β))||R_{Th}$$
 $$V_{in}=i_bR_{ib}=i_b(r_π+R_E(1+β))$$
 Voltage out
 $$V_o=-βI_bR_C$$
-Therefore: Voltage gain
+Therefore: **Voltage gain**:
 $$A_v=\frac{V_o}{V_{in}}=\frac{-βI_bR_C}{i_b(r_π+R_E(1+β))}=\frac{-βR_C}{R_E(1+β)}$$
 For large β:
 $$A_v=\frac{-R_C}{R_E}$$
