@@ -8,6 +8,7 @@ This is the index page for ES2C0 - Analogue Electronic Design.
 - [Oscillators ⟶](/posts/es2c0-oscillators/)
 - [BJT Amplifiers ⟶](/posts/es2c0-bjt-amplifiers/)
 - [MOSFET Amplifiers ⟶](/posts/es2c0-mosfet-amplifiers/)
+- [Opamps ⟶](/posts/es2c0-opamps/)
 
 These notes are in no way comprehensive, but contain information that I think is most relevant to the exam.
 
