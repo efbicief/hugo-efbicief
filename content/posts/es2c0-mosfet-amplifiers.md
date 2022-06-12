@@ -43,6 +43,8 @@ Impedence @ ri
 $$R_i=R_{ig}||R_1||R_2=\infty||R_{Th}=R_{Th}$$
 Output impedence
 $$R_o=R_D$$
+(In a source follower):
+$$R_o=\frac{1}{g_m}$$
 - Voltage in
 $$V_{in}=V_{gs}+g_mV_{gs}R_S$$
 Voltage out
