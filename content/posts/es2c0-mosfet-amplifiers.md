@@ -24,6 +24,8 @@ $$V_{DS}<V{DS(Sat)}(=V_{GS}-V_{TN})$$
 
 - Consider:
 $$R_{Th}=R_1||R_2, V_{Th}=V_{DD}\frac{R_2}{R_1+R_2}$$
+If split power:
+$$V_{Th}=(V_{DD}-V_{EE})\frac{R_2}{R_1+R_2}$$
 - In MOSFETs:
 $$I_G=0\therefore I_D=I_S$$
 - Unlike BJTs, V_GS isn't constant:
