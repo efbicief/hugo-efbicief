@@ -4,7 +4,7 @@ date: 2022-06-11T03:50:37+01:00
 draft: false
 tags: [ "ES2C0", "Electronics", "MOSFET", "Notes" ]
 ---
-# BJTs
+# MOSFETs
 {{<figure src="/mosfet.png" height=200 title="MOSFET">}}
 - MOSFET's drain, gate and source analogous to BJT collector, source and emitter\
 MOSFET saturation mode analogous to BJT forward active mode
