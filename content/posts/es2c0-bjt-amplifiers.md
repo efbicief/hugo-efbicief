@@ -30,6 +30,10 @@ If split power:
 $$V_{Th}=(V_{CC}-V_{EE})\frac{R_2}{R_1+R_2}$$
 - Using this Thévenin equivalent circuit:
 $$I_B=\frac{V_{Th}-V_{BE}}{R_{Th}+(1+β)R_E}$$
+- Stabilising I_C by design: we can choose a 'small' R_Th i.e.
+$$R_{Th}=\frac{βR_E}{10}$$
+This lets us simplify:
+$$I_C\approx I_E$$
 
 # AC analysis
 {{<figure src="/hybridpi.png" height=230 title="Four resistor bias circuit transformed for AC analysis.">}}
