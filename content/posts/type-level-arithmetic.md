@@ -4,9 +4,11 @@ description: "I did a Lightning Talk with UWCS, check it out!"
 date: 2022-12-20T09:19:33+01:00
 tldr: "Watch the video!"
 draft: false
-tags: [ "Haskell", "Type-level", "Talk", "Featured", "Project" ]
+tags: [ "Haskell", "Type-level", "Blog", "Featured", "Project" ]
 link: "https://youtu.be/Pau3MUvDGSA"
 ---
+
+> Seize two meaningless constants from the void, and imbue them with meaning. [...] To birth an algebra into the world is a beautiful thing. - Kyle Kingsbury
 
 {{< rawhtml >}}
   <iframe width="100%" height="450" src="https://www.youtube.com/embed/Pau3MUvDGSA?list=PLM7py5yAB4FxS3FzpBD4BA29M6Ue5qyVe" title="⚡Type Level Arithmetic in Haskell - Felix B" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

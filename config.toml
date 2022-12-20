@@ -13,7 +13,7 @@ paginate=100 # articles per page
 [params]
 	mode="toggle" # color-mode → light,dark,toggle or auto
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-	subtitle = "Computer Systems Engineering (MEng) student at the University of Warwick."
+	subtitle = "Computer Systems Engineering student at the University of Warwick."
   bio = "Hi! My name is Felix, I'm an undergraduate masters student at the University of Warwick, studying Computer Systems Engineering. I have experience with Haskell, Python, C, JavaScript/React, Java, and Bash. I am also Tech Officer for Warwick Minecraft Society and Warwick Computing Society."
 
 # Social Tags
