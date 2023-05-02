@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Engineering on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/software-engineering/</link>
+    <description>Recent content in Software Engineering on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Fri, 20 May 2022 10:42:34 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Release management</title>
+      <link>https://git.fbcf.xyz/posts/cs261-release-management/</link>
+      <pubDate>Fri, 20 May 2022 10:42:34 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-release-management/</guid>
+      <description>Version control Protects code as delivery nears Mitigates human and technical errors Generally maintain 3 releasable environments: dev, feature and master System building The codebase is only properly linked together towards the end of development. We use various tools to help us.
+Build script generation Version control system integration, to get correct component versions Minimal recompilation: Only recompile changed modules Executable system creation: Easy setup/installer Test automation at build time Reporting (on build progress/success/failure) Documentation generation Integrating environments Merging dev systems, since each developer will have a slightly different version Build server should maintain the definitive development build Building for target environment, including databases and apps not available in the development target Larger projects take longer to build, so may need less frequent builds with more changes each build.</description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://git.fbcf.xyz/posts/cs261-testing/</link>
+      <pubDate>Fri, 20 May 2022 10:42:34 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-testing/</guid>
+      <description>Static testing Testing without executing, with code reviews, walkthroughs, inspections, linting.
+But why?
+Errors hide other errors Code doesn&amp;rsquo;t need to be complete to test statically (compilers need not apply) Can consider code quality Dynamic testing Executing with test cases.
+Structural/white-box testing Tests derived from control/data flow of system.
+Statement adequacy: All statements are tested. Statement coverage: Executed statements / Total statements Path coverage: achieving coverage by exploring all state transitions of a system.</description>
+    </item>
+    
+    <item>
+      <title>Dependability</title>
+      <link>https://git.fbcf.xyz/posts/cs261-dependability/</link>
+      <pubDate>Fri, 20 May 2022 03:53:24 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-dependability/</guid>
+      <description>Measuring reliability Probability of failure on demand Rate of errors Mean time to failure Availability Attributes of dependability Availability: Ready for use when envoked Reliability: Likelihood of providing service for a given period of time Safety: Operation without damaging or endangering environment Confidentiality: Nondisclosure of undue information Integrity: Endures improper alterations Maintainability: Probability of repair taking less than t time Systems may prioritise these differently, eg. pacemaker needs reliability &amp;gt; security.</description>
+    </item>
+    
+    <item>
+      <title>Human-computer interaction</title>
+      <link>https://git.fbcf.xyz/posts/cs261-human-computer-interaction/</link>
+      <pubDate>Fri, 20 May 2022 03:53:24 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-human-computer-interaction/</guid>
+      <description>Attention 4 main types.
+Selective: Tuning out other things to a select set of stimuli Sustained attention: Focusing on a single task for a long time Divided attention: Focusing on multiple tasks at once Executive attention: More organised sustained attention - having a plan/end goal in mind and tracking progress over a long term task Focus determines how a system is interacted with, so grabbing attention in the right ways makes for effective interfaces.</description>
+    </item>
+    
+    <item>
+      <title>Architectural Design</title>
+      <link>https://git.fbcf.xyz/posts/cs261-architectural-design-patterns/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-architectural-design-patterns/</guid>
+      <description>Why? To understand how a system should be organised.
+Conceptual Integrity Quality driven eg. fault tolerance, maintainability, backwards compatability Recurring architecture styles Separation of concerns to reduce complexity System overview Represented with box/arrow diagrams. Arrows show direction of data/control flow, can also show breakdown of larger subsystems.
+Architectural overview Layered structure Each layer relies on the one below only, and provides services to the one above only.
+Layered architecture Repository structure All subsystem interaction done via repository.</description>
+    </item>
+    
+    <item>
+      <title>Behavioural Patterns</title>
+      <link>https://git.fbcf.xyz/posts/cs261-behavioural-patterns/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-behavioural-patterns/</guid>
+      <description>SOLID design principles Single responsibility - a single class is responsible for each bit of functionality Open for extension, closed for modification - ie. extend a class to add new functionality, not edit the original Listov substitution (Behavioural subtyping) - Allow a child object to masquerade as it&amp;rsquo;s parent for all purporses Interface segregation - Have many specific interfaces, not a few overgeneralised ones Dependency inversion - Instead of making high-level classes depend on low-level ones, have them both depend on well-defined interfaces Behavioural Patterns Iterator Object which traverses a container to access it&amp;rsquo;s elements Allows containers to be accessed without exposing their inner workings Iterators can be defined for any data-containing structure Observer Allows dependent objects to &amp;ldquo;subscribe&amp;rdquo; to object state changes Dependents get notified that a state has changed, rather than forcing it to constantly poll for changes Memento Allows for undo/redo behaviour Keeps object &amp;ldquo;snapshots&amp;rdquo; in a caretaker object Caretaker can be accessed to restore snapshots later Strategy Methods to complete task implemented in seperate object Original context object doesn&amp;rsquo;t know details of strategies, just selects one to use Good example is a graph iterator - strategies can be implemented seperately (eg.</description>
+    </item>
+    
+    <item>
+      <title>Structural Patterns</title>
+      <link>https://git.fbcf.xyz/posts/cs261-structural-patterns/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-structural-patterns/</guid>
+      <description>Factory Wrapper for a constructor that builds an object instance in a single call Has methods that build parts of the object, and combines them together (eg. might have a wheel constructor, brakes constructor, frame constructor, saddle constructor, combines them together to make a bike) Can simplify code significantly: by extending the factory class, we can create another class which can call super methods and create variants on the factory&amp;rsquo;s output (eg.</description>
+    </item>
+    
+    <item>
+      <title>System Design</title>
+      <link>https://git.fbcf.xyz/posts/cs261-system-design/</link>
+      <pubDate>Fri, 20 May 2022 01:39:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-system-design/</guid>
+      <description>UML UML diagrams model aspects of our system.
+Structural diagrams illustrate objects, attributes, and operations. Profile, Class, Composite structure, Component, Deployment, Object and Package diagrams. Behavioural diagrams illustrate dynamic system behaviour. Activity, Use case, State machine, Sequence, Communication, Interaction overview and Timing diagrams. Context Model Points to systems our system interacts with.
+Context model UML Diagram Structural Diagrams Class Diagram Static structure of system objects.
+Class UML Diagram Symbol Meaning + Public - Private # Protected / Derived _ Static ~ Package (for methods) Correct class diagrams Abstract classes&amp;rsquo; names should be in italics Interface names should be prefixed with &amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Do not include getters, setters or inherited methods.</description>
+    </item>
+    
+    <item>
+      <title>Software Methodologies</title>
+      <link>https://git.fbcf.xyz/posts/cs261-software-methodologies/</link>
+      <pubDate>Thu, 19 May 2022 09:37:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-software-methodologies/</guid>
+      <description>Two types: Plan-driven and Agile.
+All processes involve:
+Software specification - What the software should do Design and implementation - How it should be organised and implemented Validation - Checking it does what the customer asked Evolution - Changing the software over time Software specification Define which services are required and limitations of the system Idea: Create a document that anyone could use to build the system Stages of requirements engineering:</description>
+    </item>
+    
+    <item>
+      <title>CS261 - Software Engineering Index</title>
+      <link>https://git.fbcf.xyz/posts/cs261-index/</link>
+      <pubDate>Thu, 19 May 2022 09:23:15 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-index/</guid>
+      <description>This is the index page for CS261 - Software Engineering notes.
+Software methodologies ⟶ System Design ⟶ Structural Patterns ⟶ Behavioural Patterns ⟶ Architectural Design ⟶ Human-Computer Interaction ⟶ Dependability ⟶ Testing ⟶ Release management ⟶ Note that subject headers may not have the same scope as lecture slides, and content covered in lectures under one topic may be rearranged into another topic here.
+Additionally, whilst most topics are covered here, some are not - most notably requirements analysis and team organisation.</description>
+    </item>
+    
+  </channel>
+</rss>

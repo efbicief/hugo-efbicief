@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/design/</link>
+    <description>Recent content in Design on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Fri, 20 May 2022 02:32:22 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architectural Design</title>
+      <link>https://git.fbcf.xyz/posts/cs261-architectural-design-patterns/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-architectural-design-patterns/</guid>
+      <description>Why? To understand how a system should be organised.
+Conceptual Integrity Quality driven eg. fault tolerance, maintainability, backwards compatability Recurring architecture styles Separation of concerns to reduce complexity System overview Represented with box/arrow diagrams. Arrows show direction of data/control flow, can also show breakdown of larger subsystems.
+Architectural overview Layered structure Each layer relies on the one below only, and provides services to the one above only.
+Layered architecture Repository structure All subsystem interaction done via repository.</description>
+    </item>
+    
+    <item>
+      <title>System Design</title>
+      <link>https://git.fbcf.xyz/posts/cs261-system-design/</link>
+      <pubDate>Fri, 20 May 2022 01:39:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-system-design/</guid>
+      <description>UML UML diagrams model aspects of our system.
+Structural diagrams illustrate objects, attributes, and operations. Profile, Class, Composite structure, Component, Deployment, Object and Package diagrams. Behavioural diagrams illustrate dynamic system behaviour. Activity, Use case, State machine, Sequence, Communication, Interaction overview and Timing diagrams. Context Model Points to systems our system interacts with.
+Context model UML Diagram Structural Diagrams Class Diagram Static structure of system objects.
+Class UML Diagram Symbol Meaning + Public - Private # Protected / Derived _ Static ~ Package (for methods) Correct class diagrams Abstract classes&amp;rsquo; names should be in italics Interface names should be prefixed with &amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Do not include getters, setters or inherited methods.</description>
+    </item>
+    
+  </channel>
+</rss>

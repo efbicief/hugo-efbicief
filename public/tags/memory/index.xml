@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memory on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/memory/</link>
+    <description>Recent content in Memory on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Mon, 06 Jun 2022 10:22:41 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memory Systems and Paging</title>
+      <link>https://git.fbcf.xyz/posts/cs257-memory-systems/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-memory-systems/</guid>
+      <description>Types of memory Static vs Dynamic Static RAM (SRAM): Flip-flop used to store each bit. Expensive but fairly simple. Dynamic RAM (DRAM): Capacitor used to store each bit, charge leaks away so refresh circuitry needed - increases complexity. Otherwise, generally cheaper once you have the refresh circuitry, so more common. Chip types Type Read/Write Volatility Random Access Memory (RAM) Electrically, at byte level Volatile Read Only Memory (ROM) Read only - written by mask at manufacture Non-volatile Programmable ROM (PROM) Read only - write once, electrically Non-volatile Erasable PROM (EPROM) Can erase whole chip with UV light, then rewrite Non-volatile Electrically Erasable PROM (EEPROM) Electrically erase whole chip, then rewrite Non-volatile Flash Memory Can erase each block and rewrite Non-volatile Advanced DRAM organisation Synchronous DRAM (SDRAM): Synchronously exchanges information with the processor on clock cycles.</description>
+    </item>
+    
+  </channel>
+</rss>

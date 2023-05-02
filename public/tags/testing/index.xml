@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/testing/</link>
+    <description>Recent content in Testing on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Fri, 20 May 2022 10:42:34 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing</title>
+      <link>https://git.fbcf.xyz/posts/cs261-testing/</link>
+      <pubDate>Fri, 20 May 2022 10:42:34 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-testing/</guid>
+      <description>Static testing Testing without executing, with code reviews, walkthroughs, inspections, linting.
+But why?
+Errors hide other errors Code doesn&amp;rsquo;t need to be complete to test statically (compilers need not apply) Can consider code quality Dynamic testing Executing with test cases.
+Structural/white-box testing Tests derived from control/data flow of system.
+Statement adequacy: All statements are tested. Statement coverage: Executed statements / Total statements Path coverage: achieving coverage by exploring all state transitions of a system.</description>
+    </item>
+    
+  </channel>
+</rss>

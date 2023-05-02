@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interaction on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/interaction/</link>
+    <description>Recent content in Interaction on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Fri, 20 May 2022 03:53:24 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/interaction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Human-computer interaction</title>
+      <link>https://git.fbcf.xyz/posts/cs261-human-computer-interaction/</link>
+      <pubDate>Fri, 20 May 2022 03:53:24 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-human-computer-interaction/</guid>
+      <description>Attention 4 main types.
+Selective: Tuning out other things to a select set of stimuli Sustained attention: Focusing on a single task for a long time Divided attention: Focusing on multiple tasks at once Executive attention: More organised sustained attention - having a plan/end goal in mind and tracking progress over a long term task Focus determines how a system is interacted with, so grabbing attention in the right ways makes for effective interfaces.</description>
+    </item>
+    
+  </channel>
+</rss>

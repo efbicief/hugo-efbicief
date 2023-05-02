@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/notes/</link>
+    <description>Recent content in Notes on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Sat, 11 Jun 2022 03:50:37 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BJT Amplifiers</title>
+      <link>https://git.fbcf.xyz/posts/es2c0-bjt-amplifiers/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/es2c0-bjt-amplifiers/</guid>
+      <description>BJTs NPN vs PNP BJTs Analogue design focuses on the forward-active mode of BJTs (B-E forward biased, C-B reverse biased) β is the common-emitter current gain, usually ~150 $$β=\frac{i_C}{i_B}, i_C=βi_B$$ $$i_E=i_B+i_C$$ α is the common-base current gain $$α=\frac{β}{β+1}, β=\frac{α}{1-α}$$ $$i_E=\frac{i_C}{α}$$ For a large β: $$α\approx 1$$ For a BJT (npn and pnp respectively), we take: $$v_{BE}=0.7v, v_{EB}=0.7v$$ DC analysis We want to set up a Q-point (quiescent) to a certain specification, we do this by setting resistor values Voltage divider (Four Resistor) bias circuit, and it&amp;#39;s Thevenin equivalent circuit Consider: $$R_{Th}=R_1||R_2, V_{Th}=V_{CC}\frac{R_2}{R_1+R_2}$$ If split power: $$V_{Th}=(V_{CC}-V_{EE})\frac{R_2}{R_1+R_2}$$ Using this Thévenin equivalent circuit: $$I_B=\frac{V_{Th}-V_{BE}}{R_{Th}+(1+β)R_E}$$ Stabilising I_C by design: we can choose a &amp;lsquo;small&amp;rsquo; R_Th i.</description>
+    </item>
+    
+    <item>
+      <title>MOSFET Amplifiers</title>
+      <link>https://git.fbcf.xyz/posts/es2c0-mosfet-amplifiers/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/es2c0-mosfet-amplifiers/</guid>
+      <description>MOSFETs MOSFET MOSFET&amp;rsquo;s drain, gate and source analogous to BJT collector, source and emitter
+MOSFET saturation mode analogous to BJT forward active mode k_n = transconduction constant, given to us (defined in terms of semiconductor geometry, etc), V_TN = threshold voltage MOSFET is in saturation if the following holds: $$V_{DS}&amp;gt;V{DS(Sat)}(=V_{GS}-V_{TN})$$ $$V_{GS}&amp;gt;V_{TN}$$ In this case: $$i_{D}=k_n(V_{GS}-V_{TN})^2$$ MOSFET is in linear region if the following holds: $$V_{DS}&amp;lt;V{DS(Sat)}(=V_{GS}-V_{TN})$$ DC analysis Similar circuit to BJTs for biasing Voltage divider (Four Resistor) bias circuit (MOSFET) Consider: $$R_{Th}=R_1||R_2, V_{Th}=V_{DD}\frac{R_2}{R_1+R_2}$$ If split power: $$V_{Th}=(V_{DD}-V_{EE})\frac{R_2}{R_1+R_2}$$ In MOSFETs: $$I_G=0\therefore I_D=I_S$$ Unlike BJTs, V_GS isn&amp;rsquo;t constant: $$i_D=k_n(V_{GS}-V_{TN})^2\therefore V_{GS}=\sqrt{i_D/k_n}+V_{TN}$$ When analysing using Thévenin equivalent circuit of above, we can solve for (root) I_D: $$I_DR_S+\frac{1}{\sqrt{k_n}}\sqrt{I_D}+V_{TN}-V_{Th}=0$$ Quadratic yields 2 values for I_D - need to test which one is correct by applying the criteria for saturation as listed above and checking consistency AC analysis Small signal model for a MOSFET.</description>
+    </item>
+    
+    <item>
+      <title>Opamps</title>
+      <link>https://git.fbcf.xyz/posts/es2c0-opamps/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/es2c0-opamps/</guid>
+      <description>Opamp attributes Inverting input v1, non-inverting input v2: $$v_2-v_1=0$$ $$v_o=A(v_2-v_1)$$ Ideal characteristics: A -&amp;gt; infty Input currents -&amp;gt; 0 Rin -&amp;gt; intfy Rout -&amp;gt; 0 Slewrate -&amp;gt; infty Bandwidth -&amp;gt; intfy Inverting amplifier Inverting amplifier $$A=\frac{v_o}{v_{in}}=\frac{-R_2}{R_1}$$
+Non-inverting amplifier Non-inverting amplifier $$A=\frac{v_o}{v_{in}}=1+\frac{R_2}{R_1}$$
+Integrator Integrator $$v_o=\frac{-1}{RC}\int v_{in}dt$$
+Differentiator Differentiator Note: In this form, the circuit is not stabe, as high frequency noise can send it into oscillation $$v_o=-RC\frac{dv_{in}}{dt}$$ Inverting summer Inverting summer $$v_o=-[v_1(\frac{R_f}{R_1})+v_2(\frac{R_f}{R_2})&amp;hellip;]$$</description>
+    </item>
+    
+    <item>
+      <title>Oscillators</title>
+      <link>https://git.fbcf.xyz/posts/es2c0-oscillators/</link>
+      <pubDate>Fri, 10 Jun 2022 01:15:56 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/es2c0-oscillators/</guid>
+      <description>Oscillators Consist of an amplifier A, and a frequency selective network β $$A_{cl}(jω)=\frac{v_o}{v_i}=\frac{A}{1-Aβ(jω)}$$ For oscillation to occur: $$Aβ=1\angle 0^{\circ}; |Aβ|=1, : A_{cl}(jω)\rightarrow\infty$$ 2 aspects of oscillators that we consider: Frequency of oscillation (ω0/f0) Gainloss (amplitude of β); to decide amplifier gain s.t. |Aβ|=1 Wien bridge Wien Bridge Oscillator V2 on diagram: use a potential divider s.t. $$v_2=\frac{Z_2}{Z_1+Z_2}, Z_1=R+\frac{1}{sC}, Z_2=R//\frac{1}{sC}=\frac{R}{1+sCR}$$ letting s=jω. v2 is the transfer function wrt. v1. Frequency of oscillation in a Wien bridge (frequency selective circuit β): $$ω_0=\frac{1}{CR}, f_0=\frac{1}{2\pi CR}$$ Gainloss: $$@ω_0=\frac{1}{CR}, β(jω)=\frac{1}{3};|Aβ|=1\implies A=3$$ Phase shift oscillator Phase Shift Oscillator The final opamp is inverting (phase shift=180deg), therefore the 3 RC networks before it must create a 180deg phase shift (60deg each) Transfer function of each CR network: $$\frac{v_o}{v_i}(jω)=\frac{R}{R+\frac{1}{jωC}}=\frac{jωCR}{1+jωCR}$$ Frequency of oscillation in a phase shift oscillator (frequency selective circuit β): s.</description>
+    </item>
+    
+    <item>
+      <title>ES2C0 - Analogue Electronic Design index</title>
+      <link>https://git.fbcf.xyz/posts/es2c0-index/</link>
+      <pubDate>Fri, 10 Jun 2022 01:15:49 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/es2c0-index/</guid>
+      <description>This is the index page for ES2C0 - Analogue Electronic Design.
+Oscillators ⟶ BJT Amplifiers ⟶ MOSFET Amplifiers ⟶ Opamps ⟶ These notes are in no way comprehensive, but contain information that I think is most relevant to the exam.
+These notes are available under the MIT License, so you can do pretty much whatever you want with it, as long as any modifications or redistributions include the linked notice. I would also appreciate it if you were to credit me 😃</description>
+    </item>
+    
+    <item>
+      <title>Embedded systems</title>
+      <link>https://git.fbcf.xyz/posts/cs257-embedded-systems/</link>
+      <pubDate>Wed, 08 Jun 2022 11:49:23 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-embedded-systems/</guid>
+      <description>Small systems dedicated to a particular task.
+Dependability Reliability(t): probability of system still working given it worked at t=0. Maintainability(d): probability of system working d time units after a fault occurred. Availability(t): Probability of system working at time t. Safety: No harm caused by system. Security: Communication kept confidential. Efficiency Must consider Code size, Runtime, Weight, Cost and Energy efficiency. Power and energy efficiency are particularly important - they tend to constrain embedded systems Minimising power important for PSU design, short term cooling, voltage regulation, etc.</description>
+    </item>
+    
+    <item>
+      <title>I/O and Secondary Storage</title>
+      <link>https://git.fbcf.xyz/posts/cs257-io-secondary-storage/</link>
+      <pubDate>Wed, 08 Jun 2022 11:49:23 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-io-secondary-storage/</guid>
+      <description>I/O Programmed I/O: CPU does all the work. 2 forms: Memory mapped I/O: I/O devices treated like memory, and sending / receiving data between them uses the same instructions as writing / reading to memory. Requires reserving memory space for I/O devices. Isolated I/O: Bus has seperate I/O read / write lines. Instructions specify whether an address is for I/O or main memory. Waiting for I/O devices to be ready takes a long time.</description>
+    </item>
+    
+    <item>
+      <title>Parallel Computation</title>
+      <link>https://git.fbcf.xyz/posts/cs257-parallel-computation/</link>
+      <pubDate>Tue, 07 Jun 2022 06:30:43 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-parallel-computation/</guid>
+      <description>Flynn&amp;rsquo;s taxonomy Single Data stream Multiple Data stream Single Instruction SISD: &amp;ldquo;Regular&amp;rdquo; processor SIMD: Vectorisation Single Data MISD: Uncommon - n-version programming MIMD: Distributed systems More detail below. Flynn&amp;#39;s taxonomy MIMD Available as shared memory and distributed memory. Shared memory: Communicate via memory, easy to program. Distributed memory: Communication can be done between autonomous processors in software. Examples include Ethernet, Infiniband, etc. Communicates via message passing. Hardware interconnection structures allow processors to access memory and communicate with other processors.</description>
+    </item>
+    
+    <item>
+      <title>Processor Architecture</title>
+      <link>https://git.fbcf.xyz/posts/cs257-processor-architecture/</link>
+      <pubDate>Tue, 07 Jun 2022 06:30:43 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-processor-architecture/</guid>
+      <description>Instruction cycle aka Fetch-decode-execute cycle
+Some instructions during the instruction cycle may require additional fetches. This makes the indirect cycle. We don&amp;rsquo;t always need to wait for an instruction to finish completely before fetching the next. Instructions can be prefetched during the idle memory cycle, when an instruction is being executed. The indirect instruction cycle The indirect instruction cycle Control unit design 2 types:
+Hardwired CU: is a combinatorial &amp;lsquo;random logic&amp;rsquo; circuit.</description>
+    </item>
+    
+    <item>
+      <title>Caches</title>
+      <link>https://git.fbcf.xyz/posts/cs257-caches/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-caches/</guid>
+      <description>We want to maximise cache hit ratio, i.e. amount of accesses where data is present in cache.
+Cache mapping Direct: Maps each block of main memory to one possible cache line. Means that if two bits of data are mapped to the same cache line, one must be swapped out. Associative: Any memory block can be stored in any cache line, but cache logic must then search through every cache line to check if something is in the cache.</description>
+    </item>
+    
+    <item>
+      <title>Code Optimisation - Parallelisation</title>
+      <link>https://git.fbcf.xyz/posts/cs257-optimisation/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-optimisation/</guid>
+      <description>For this section of the notes, we will work through the following past question from the 2020 paper, using SIMD instructions.
+The simulate function below is taken from a compute intensive simulation program written in C. void simulate() { //Loop 1 for (int i = 0; i &amp;lt; N; i++) { ax[i] = 0.0f; ay[i] = 0.0f; az[i] = 0.0f; } //Loop 2 for (int i = 0; i &amp;lt; N; i++) { for (int j = 0; j &amp;lt; N; j++) { float rx = x[j] - x[i]; float ry = y[j] - y[i]; float rz = z[j] - z[i]; float r2 = rx*rx + ry*ry + rz*rz + eps; float r2inv = 1.</description>
+    </item>
+    
+    <item>
+      <title>Code Optimisation - Theory</title>
+      <link>https://git.fbcf.xyz/posts/cs257-optimisation-theory/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-optimisation-theory/</guid>
+      <description>Metrics Floating point operations per second Peak FLOPs: Maximum attainable, assuming no cost to memory operations. Peak GFLOPs = Clock speed (GHz) * Cores * FLOPs/cycle Speedup = unoptimised time / optimised time Optimisation approaches Algorithmic: Implementing a more efficient algorithm eg. using merge sort instead of bubble sort Code refactoring: Making changes to convince the compiler to apply optimisations. Removing interloop dependencies: Making a loop only rely on the current iteration can allow for parallelisation.</description>
+    </item>
+    
+    <item>
+      <title>CS257 - Selected topics in ACA index</title>
+      <link>https://git.fbcf.xyz/posts/cs257-index/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-index/</guid>
+      <description>This is the index page for CS257 - Advanced Computer Architecture.
+Memory systems ⟶ Caches ⟶ Code optimisation (vectorisation) ⟶ Code optimisation (theory) ⟶ Processor architecture ⟶ Parallel computation ⟶ I/O &amp;amp; Secondary storage ⟶ Embedded systems ⟶ These notes are in no way comprehensive, but contain information that I think is most relevant to this module.
+These notes are available under the MIT License, so you can do pretty much whatever you want with it, as long as any modifications or redistributions include the linked notice.</description>
+    </item>
+    
+    <item>
+      <title>Memory Systems and Paging</title>
+      <link>https://git.fbcf.xyz/posts/cs257-memory-systems/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-memory-systems/</guid>
+      <description>Types of memory Static vs Dynamic Static RAM (SRAM): Flip-flop used to store each bit. Expensive but fairly simple. Dynamic RAM (DRAM): Capacitor used to store each bit, charge leaks away so refresh circuitry needed - increases complexity. Otherwise, generally cheaper once you have the refresh circuitry, so more common. Chip types Type Read/Write Volatility Random Access Memory (RAM) Electrically, at byte level Volatile Read Only Memory (ROM) Read only - written by mask at manufacture Non-volatile Programmable ROM (PROM) Read only - write once, electrically Non-volatile Erasable PROM (EPROM) Can erase whole chip with UV light, then rewrite Non-volatile Electrically Erasable PROM (EEPROM) Electrically erase whole chip, then rewrite Non-volatile Flash Memory Can erase each block and rewrite Non-volatile Advanced DRAM organisation Synchronous DRAM (SDRAM): Synchronously exchanges information with the processor on clock cycles.</description>
+    </item>
+    
+    <item>
+      <title>Release management</title>
+      <link>https://git.fbcf.xyz/posts/cs261-release-management/</link>
+      <pubDate>Fri, 20 May 2022 10:42:34 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-release-management/</guid>
+      <description>Version control Protects code as delivery nears Mitigates human and technical errors Generally maintain 3 releasable environments: dev, feature and master System building The codebase is only properly linked together towards the end of development. We use various tools to help us.
+Build script generation Version control system integration, to get correct component versions Minimal recompilation: Only recompile changed modules Executable system creation: Easy setup/installer Test automation at build time Reporting (on build progress/success/failure) Documentation generation Integrating environments Merging dev systems, since each developer will have a slightly different version Build server should maintain the definitive development build Building for target environment, including databases and apps not available in the development target Larger projects take longer to build, so may need less frequent builds with more changes each build.</description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://git.fbcf.xyz/posts/cs261-testing/</link>
+      <pubDate>Fri, 20 May 2022 10:42:34 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-testing/</guid>
+      <description>Static testing Testing without executing, with code reviews, walkthroughs, inspections, linting.
+But why?
+Errors hide other errors Code doesn&amp;rsquo;t need to be complete to test statically (compilers need not apply) Can consider code quality Dynamic testing Executing with test cases.
+Structural/white-box testing Tests derived from control/data flow of system.
+Statement adequacy: All statements are tested. Statement coverage: Executed statements / Total statements Path coverage: achieving coverage by exploring all state transitions of a system.</description>
+    </item>
+    
+    <item>
+      <title>Dependability</title>
+      <link>https://git.fbcf.xyz/posts/cs261-dependability/</link>
+      <pubDate>Fri, 20 May 2022 03:53:24 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-dependability/</guid>
+      <description>Measuring reliability Probability of failure on demand Rate of errors Mean time to failure Availability Attributes of dependability Availability: Ready for use when envoked Reliability: Likelihood of providing service for a given period of time Safety: Operation without damaging or endangering environment Confidentiality: Nondisclosure of undue information Integrity: Endures improper alterations Maintainability: Probability of repair taking less than t time Systems may prioritise these differently, eg. pacemaker needs reliability &amp;gt; security.</description>
+    </item>
+    
+    <item>
+      <title>Human-computer interaction</title>
+      <link>https://git.fbcf.xyz/posts/cs261-human-computer-interaction/</link>
+      <pubDate>Fri, 20 May 2022 03:53:24 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-human-computer-interaction/</guid>
+      <description>Attention 4 main types.
+Selective: Tuning out other things to a select set of stimuli Sustained attention: Focusing on a single task for a long time Divided attention: Focusing on multiple tasks at once Executive attention: More organised sustained attention - having a plan/end goal in mind and tracking progress over a long term task Focus determines how a system is interacted with, so grabbing attention in the right ways makes for effective interfaces.</description>
+    </item>
+    
+    <item>
+      <title>Architectural Design</title>
+      <link>https://git.fbcf.xyz/posts/cs261-architectural-design-patterns/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-architectural-design-patterns/</guid>
+      <description>Why? To understand how a system should be organised.
+Conceptual Integrity Quality driven eg. fault tolerance, maintainability, backwards compatability Recurring architecture styles Separation of concerns to reduce complexity System overview Represented with box/arrow diagrams. Arrows show direction of data/control flow, can also show breakdown of larger subsystems.
+Architectural overview Layered structure Each layer relies on the one below only, and provides services to the one above only.
+Layered architecture Repository structure All subsystem interaction done via repository.</description>
+    </item>
+    
+    <item>
+      <title>Behavioural Patterns</title>
+      <link>https://git.fbcf.xyz/posts/cs261-behavioural-patterns/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-behavioural-patterns/</guid>
+      <description>SOLID design principles Single responsibility - a single class is responsible for each bit of functionality Open for extension, closed for modification - ie. extend a class to add new functionality, not edit the original Listov substitution (Behavioural subtyping) - Allow a child object to masquerade as it&amp;rsquo;s parent for all purporses Interface segregation - Have many specific interfaces, not a few overgeneralised ones Dependency inversion - Instead of making high-level classes depend on low-level ones, have them both depend on well-defined interfaces Behavioural Patterns Iterator Object which traverses a container to access it&amp;rsquo;s elements Allows containers to be accessed without exposing their inner workings Iterators can be defined for any data-containing structure Observer Allows dependent objects to &amp;ldquo;subscribe&amp;rdquo; to object state changes Dependents get notified that a state has changed, rather than forcing it to constantly poll for changes Memento Allows for undo/redo behaviour Keeps object &amp;ldquo;snapshots&amp;rdquo; in a caretaker object Caretaker can be accessed to restore snapshots later Strategy Methods to complete task implemented in seperate object Original context object doesn&amp;rsquo;t know details of strategies, just selects one to use Good example is a graph iterator - strategies can be implemented seperately (eg.</description>
+    </item>
+    
+    <item>
+      <title>Structural Patterns</title>
+      <link>https://git.fbcf.xyz/posts/cs261-structural-patterns/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-structural-patterns/</guid>
+      <description>Factory Wrapper for a constructor that builds an object instance in a single call Has methods that build parts of the object, and combines them together (eg. might have a wheel constructor, brakes constructor, frame constructor, saddle constructor, combines them together to make a bike) Can simplify code significantly: by extending the factory class, we can create another class which can call super methods and create variants on the factory&amp;rsquo;s output (eg.</description>
+    </item>
+    
+    <item>
+      <title>System Design</title>
+      <link>https://git.fbcf.xyz/posts/cs261-system-design/</link>
+      <pubDate>Fri, 20 May 2022 01:39:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-system-design/</guid>
+      <description>UML UML diagrams model aspects of our system.
+Structural diagrams illustrate objects, attributes, and operations. Profile, Class, Composite structure, Component, Deployment, Object and Package diagrams. Behavioural diagrams illustrate dynamic system behaviour. Activity, Use case, State machine, Sequence, Communication, Interaction overview and Timing diagrams. Context Model Points to systems our system interacts with.
+Context model UML Diagram Structural Diagrams Class Diagram Static structure of system objects.
+Class UML Diagram Symbol Meaning + Public - Private # Protected / Derived _ Static ~ Package (for methods) Correct class diagrams Abstract classes&amp;rsquo; names should be in italics Interface names should be prefixed with &amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Do not include getters, setters or inherited methods.</description>
+    </item>
+    
+    <item>
+      <title>Software Methodologies</title>
+      <link>https://git.fbcf.xyz/posts/cs261-software-methodologies/</link>
+      <pubDate>Thu, 19 May 2022 09:37:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-software-methodologies/</guid>
+      <description>Two types: Plan-driven and Agile.
+All processes involve:
+Software specification - What the software should do Design and implementation - How it should be organised and implemented Validation - Checking it does what the customer asked Evolution - Changing the software over time Software specification Define which services are required and limitations of the system Idea: Create a document that anyone could use to build the system Stages of requirements engineering:</description>
+    </item>
+    
+    <item>
+      <title>CS261 - Software Engineering Index</title>
+      <link>https://git.fbcf.xyz/posts/cs261-index/</link>
+      <pubDate>Thu, 19 May 2022 09:23:15 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-index/</guid>
+      <description>This is the index page for CS261 - Software Engineering notes.
+Software methodologies ⟶ System Design ⟶ Structural Patterns ⟶ Behavioural Patterns ⟶ Architectural Design ⟶ Human-Computer Interaction ⟶ Dependability ⟶ Testing ⟶ Release management ⟶ Note that subject headers may not have the same scope as lecture slides, and content covered in lectures under one topic may be rearranged into another topic here.
+Additionally, whilst most topics are covered here, some are not - most notably requirements analysis and team organisation.</description>
+    </item>
+    
+  </channel>
+</rss>

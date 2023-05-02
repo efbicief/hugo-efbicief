@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Processor on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/processor/</link>
+    <description>Recent content in Processor on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Tue, 07 Jun 2022 06:30:43 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/processor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Processor Architecture</title>
+      <link>https://git.fbcf.xyz/posts/cs257-processor-architecture/</link>
+      <pubDate>Tue, 07 Jun 2022 06:30:43 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-processor-architecture/</guid>
+      <description>Instruction cycle aka Fetch-decode-execute cycle
+Some instructions during the instruction cycle may require additional fetches. This makes the indirect cycle. We don&amp;rsquo;t always need to wait for an instruction to finish completely before fetching the next. Instructions can be prefetched during the idle memory cycle, when an instruction is being executed. The indirect instruction cycle The indirect instruction cycle Control unit design 2 types:
+Hardwired CU: is a combinatorial &amp;lsquo;random logic&amp;rsquo; circuit.</description>
+    </item>
+    
+  </channel>
+</rss>

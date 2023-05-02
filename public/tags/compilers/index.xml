@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Compilers on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/compilers/</link>
+    <description>Recent content in Compilers on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Mon, 21 Nov 2022 10:05:57 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/compilers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MiniC Compiler</title>
+      <link>https://git.fbcf.xyz/posts/compiler-cswrk/</link>
+      <pubDate>Mon, 21 Nov 2022 10:05:57 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/compiler-cswrk/</guid>
+      <description>Hello! This section hasn&amp;rsquo;t been written yet - sorry!</description>
+    </item>
+    
+    <item>
+      <title>Scratch Clone</title>
+      <link>https://git.fbcf.xyz/posts/scratch-clone/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/scratch-clone/</guid>
+      <description>Hello! This section hasn&amp;rsquo;t been written yet - sorry!</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/</link>
+    <description>Recent content in Tags on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Tue, 20 Dec 2022 09:19:33 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>https://git.fbcf.xyz/tags/blog/</link>
+      <pubDate>Tue, 20 Dec 2022 09:19:33 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Featured</title>
+      <link>https://git.fbcf.xyz/tags/featured/</link>
+      <pubDate>Tue, 20 Dec 2022 09:19:33 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/featured/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haskell</title>
+      <link>https://git.fbcf.xyz/tags/haskell/</link>
+      <pubDate>Tue, 20 Dec 2022 09:19:33 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/haskell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>https://git.fbcf.xyz/tags/project/</link>
+      <pubDate>Tue, 20 Dec 2022 09:19:33 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Type-level</title>
+      <link>https://git.fbcf.xyz/tags/type-level/</link>
+      <pubDate>Tue, 20 Dec 2022 09:19:33 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/type-level/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://git.fbcf.xyz/tags/c&#43;&#43;/</link>
+      <pubDate>Mon, 21 Nov 2022 10:05:57 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Compilers</title>
+      <link>https://git.fbcf.xyz/tags/compilers/</link>
+      <pubDate>Mon, 21 Nov 2022 10:05:57 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/compilers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LLVM</title>
+      <link>https://git.fbcf.xyz/tags/llvm/</link>
+      <pubDate>Mon, 21 Nov 2022 10:05:57 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/llvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BJT</title>
+      <link>https://git.fbcf.xyz/tags/bjt/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/bjt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Electronics</title>
+      <link>https://git.fbcf.xyz/tags/electronics/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/electronics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ES2C0</title>
+      <link>https://git.fbcf.xyz/tags/es2c0/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/es2c0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MOSFET</title>
+      <link>https://git.fbcf.xyz/tags/mosfet/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/mosfet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>https://git.fbcf.xyz/tags/notes/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opamp</title>
+      <link>https://git.fbcf.xyz/tags/opamp/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/opamp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oscillators</title>
+      <link>https://git.fbcf.xyz/tags/oscillators/</link>
+      <pubDate>Fri, 10 Jun 2022 01:15:56 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/oscillators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Index</title>
+      <link>https://git.fbcf.xyz/tags/index/</link>
+      <pubDate>Fri, 10 Jun 2022 01:15:49 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/index/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://git.fbcf.xyz/tags/architecture/</link>
+      <pubDate>Wed, 08 Jun 2022 11:49:23 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS257</title>
+      <link>https://git.fbcf.xyz/tags/cs257/</link>
+      <pubDate>Wed, 08 Jun 2022 11:49:23 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/cs257/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embedded</title>
+      <link>https://git.fbcf.xyz/tags/embedded/</link>
+      <pubDate>Wed, 08 Jun 2022 11:49:23 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/embedded/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Parallelism</title>
+      <link>https://git.fbcf.xyz/tags/parallelism/</link>
+      <pubDate>Tue, 07 Jun 2022 06:30:43 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/parallelism/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pipelining</title>
+      <link>https://git.fbcf.xyz/tags/pipelining/</link>
+      <pubDate>Tue, 07 Jun 2022 06:30:43 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/pipelining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Processor</title>
+      <link>https://git.fbcf.xyz/tags/processor/</link>
+      <pubDate>Tue, 07 Jun 2022 06:30:43 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/processor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cache</title>
+      <link>https://git.fbcf.xyz/tags/cache/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/cache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Memory</title>
+      <link>https://git.fbcf.xyz/tags/memory/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/memory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimisation</title>
+      <link>https://git.fbcf.xyz/tags/optimisation/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/optimisation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS261</title>
+      <link>https://git.fbcf.xyz/tags/cs261/</link>
+      <pubDate>Fri, 20 May 2022 10:42:34 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/cs261/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Engineering</title>
+      <link>https://git.fbcf.xyz/tags/software-engineering/</link>
+      <pubDate>Fri, 20 May 2022 10:42:34 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/software-engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://git.fbcf.xyz/tags/testing/</link>
+      <pubDate>Fri, 20 May 2022 10:42:34 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dependability</title>
+      <link>https://git.fbcf.xyz/tags/dependability/</link>
+      <pubDate>Fri, 20 May 2022 03:53:24 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/dependability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Interaction</title>
+      <link>https://git.fbcf.xyz/tags/interaction/</link>
+      <pubDate>Fri, 20 May 2022 03:53:24 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/interaction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>https://git.fbcf.xyz/tags/design/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Implementation</title>
+      <link>https://git.fbcf.xyz/tags/implementation/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/implementation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Patterns</title>
+      <link>https://git.fbcf.xyz/tags/patterns/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/patterns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methodologies</title>
+      <link>https://git.fbcf.xyz/tags/methodologies/</link>
+      <pubDate>Thu, 19 May 2022 09:37:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/methodologies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI</title>
+      <link>https://git.fbcf.xyz/tags/ai/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Express.js</title>
+      <link>https://git.fbcf.xyz/tags/express.js/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/express.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://git.fbcf.xyz/tags/javascript/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React.js</title>
+      <link>https://git.fbcf.xyz/tags/react.js/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/react.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://git.fbcf.xyz/tags/python/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FPGA</title>
+      <link>https://git.fbcf.xyz/tags/fpga/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/fpga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graphics</title>
+      <link>https://git.fbcf.xyz/tags/graphics/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/graphics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simulation</title>
+      <link>https://git.fbcf.xyz/tags/simulation/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/simulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Verilog</title>
+      <link>https://git.fbcf.xyz/tags/verilog/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/verilog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>https://git.fbcf.xyz/tags/c/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ncurses</title>
+      <link>https://git.fbcf.xyz/tags/ncurses/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/ncurses/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I/O</title>
+      <link>https://git.fbcf.xyz/tags/i/o/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://git.fbcf.xyz/tags/i/o/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

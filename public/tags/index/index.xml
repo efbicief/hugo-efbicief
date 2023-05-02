@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Index on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/index/</link>
+    <description>Recent content in Index on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Fri, 10 Jun 2022 01:15:49 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ES2C0 - Analogue Electronic Design index</title>
+      <link>https://git.fbcf.xyz/posts/es2c0-index/</link>
+      <pubDate>Fri, 10 Jun 2022 01:15:49 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/es2c0-index/</guid>
+      <description>This is the index page for ES2C0 - Analogue Electronic Design.
+Oscillators ⟶ BJT Amplifiers ⟶ MOSFET Amplifiers ⟶ Opamps ⟶ These notes are in no way comprehensive, but contain information that I think is most relevant to the exam.
+These notes are available under the MIT License, so you can do pretty much whatever you want with it, as long as any modifications or redistributions include the linked notice. I would also appreciate it if you were to credit me 😃</description>
+    </item>
+    
+    <item>
+      <title>CS257 - Selected topics in ACA index</title>
+      <link>https://git.fbcf.xyz/posts/cs257-index/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-index/</guid>
+      <description>This is the index page for CS257 - Advanced Computer Architecture.
+Memory systems ⟶ Caches ⟶ Code optimisation (vectorisation) ⟶ Code optimisation (theory) ⟶ Processor architecture ⟶ Parallel computation ⟶ I/O &amp;amp; Secondary storage ⟶ Embedded systems ⟶ These notes are in no way comprehensive, but contain information that I think is most relevant to this module.
+These notes are available under the MIT License, so you can do pretty much whatever you want with it, as long as any modifications or redistributions include the linked notice.</description>
+    </item>
+    
+    <item>
+      <title>CS261 - Software Engineering Index</title>
+      <link>https://git.fbcf.xyz/posts/cs261-index/</link>
+      <pubDate>Thu, 19 May 2022 09:23:15 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-index/</guid>
+      <description>This is the index page for CS261 - Software Engineering notes.
+Software methodologies ⟶ System Design ⟶ Structural Patterns ⟶ Behavioural Patterns ⟶ Architectural Design ⟶ Human-Computer Interaction ⟶ Dependability ⟶ Testing ⟶ Release management ⟶ Note that subject headers may not have the same scope as lecture slides, and content covered in lectures under one topic may be rearranged into another topic here.
+Additionally, whilst most topics are covered here, some are not - most notably requirements analysis and team organisation.</description>
+    </item>
+    
+  </channel>
+</rss>

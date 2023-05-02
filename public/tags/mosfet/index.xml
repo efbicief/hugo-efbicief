@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MOSFET on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/mosfet/</link>
+    <description>Recent content in MOSFET on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Sat, 11 Jun 2022 03:50:37 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/mosfet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MOSFET Amplifiers</title>
+      <link>https://git.fbcf.xyz/posts/es2c0-mosfet-amplifiers/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/es2c0-mosfet-amplifiers/</guid>
+      <description>MOSFETs MOSFET MOSFET&amp;rsquo;s drain, gate and source analogous to BJT collector, source and emitter
+MOSFET saturation mode analogous to BJT forward active mode k_n = transconduction constant, given to us (defined in terms of semiconductor geometry, etc), V_TN = threshold voltage MOSFET is in saturation if the following holds: $$V_{DS}&amp;gt;V{DS(Sat)}(=V_{GS}-V_{TN})$$ $$V_{GS}&amp;gt;V_{TN}$$ In this case: $$i_{D}=k_n(V_{GS}-V_{TN})^2$$ MOSFET is in linear region if the following holds: $$V_{DS}&amp;lt;V{DS(Sat)}(=V_{GS}-V_{TN})$$ DC analysis Similar circuit to BJTs for biasing Voltage divider (Four Resistor) bias circuit (MOSFET) Consider: $$R_{Th}=R_1||R_2, V_{Th}=V_{DD}\frac{R_2}{R_1+R_2}$$ If split power: $$V_{Th}=(V_{DD}-V_{EE})\frac{R_2}{R_1+R_2}$$ In MOSFETs: $$I_G=0\therefore I_D=I_S$$ Unlike BJTs, V_GS isn&amp;rsquo;t constant: $$i_D=k_n(V_{GS}-V_{TN})^2\therefore V_{GS}=\sqrt{i_D/k_n}+V_{TN}$$ When analysing using Thévenin equivalent circuit of above, we can solve for (root) I_D: $$I_DR_S+\frac{1}{\sqrt{k_n}}\sqrt{I_D}+V_{TN}-V_{Th}=0$$ Quadratic yields 2 values for I_D - need to test which one is correct by applying the criteria for saturation as listed above and checking consistency AC analysis Small signal model for a MOSFET.</description>
+    </item>
+    
+  </channel>
+</rss>

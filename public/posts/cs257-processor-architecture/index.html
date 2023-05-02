@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Processor Architecture - Felix B</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Instruction cycle aka Fetch-decode-execute cycle
+Some instructions during the instruction cycle may require additional fetches. This makes the indirect cycle. We don&rsquo;t always need to wait for an instruction to finish completely before fetching the next. Instructions can be prefetched during the idle memory cycle, when an instruction is being executed. The indirect instruction cycle The indirect instruction cycle Control unit design 2 types:
+Hardwired CU: is a combinatorial &lsquo;random logic&rsquo; circuit." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Processor Architecture" />
+<meta property="og:description" content="Instruction cycle aka Fetch-decode-execute cycle
+Some instructions during the instruction cycle may require additional fetches. This makes the indirect cycle. We don&rsquo;t always need to wait for an instruction to finish completely before fetching the next. Instructions can be prefetched during the idle memory cycle, when an instruction is being executed. The indirect instruction cycle The indirect instruction cycle Control unit design 2 types:
+Hardwired CU: is a combinatorial &lsquo;random logic&rsquo; circuit." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://git.fbcf.xyz/posts/cs257-processor-architecture/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-07T06:30:43+01:00" />
+<meta property="article:modified_time" content="2022-06-07T06:30:43+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Processor Architecture"/>
+<meta name="twitter:description" content="Instruction cycle aka Fetch-decode-execute cycle
+Some instructions during the instruction cycle may require additional fetches. This makes the indirect cycle. We don&rsquo;t always need to wait for an instruction to finish completely before fetching the next. Instructions can be prefetched during the idle memory cycle, when an instruction is being executed. The indirect instruction cycle The indirect instruction cycle Control unit design 2 types:
+Hardwired CU: is a combinatorial &lsquo;random logic&rsquo; circuit."/>
+<script src="https://git.fbcf.xyz/js/feather.min.js"></script>
+	
+	
+        <link href="https://git.fbcf.xyz/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://git.fbcf.xyz/css/main.46ba03325b5087e4bf8af8478b7cbcd704d0bbc30a81b70daa3b1f89234d557a.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://git.fbcf.xyz/css/dark.beec145b83af0d77445953d9c13ffa0b82ce322075bcd619e86b6afcafc1426f.css"  disabled />
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://git.fbcf.xyz/">Felix B</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/tags/project">Projects</a>
+		
+		<a href="/tags/blog">Blog Posts</a>
+		
+		<a href="/tags/index">Notes</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/tags">All Tags</a>
+		
+		| <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+		<script src="https://git.fbcf.xyz/js/themetoggle.js"></script>
+		
+	</nav>
+	
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Processor Architecture</h1>
+			<div class="meta">Posted on Jun 7, 2022
+				
+				
+				
+			</div>
+		</div>
+
+		
+
+		<section class="body">
+			<h1 id="instruction-cycle">Instruction cycle</h1>
+<p><em>aka Fetch-decode-execute cycle</em></p>
+<ul>
+<li>Some instructions during the instruction cycle may require additional fetches. This makes the indirect cycle.</li>
+<li>We don&rsquo;t always need to wait for an instruction to finish completely before fetching the next.</li>
+<li>Instructions can be prefetched during the idle memory cycle, when an instruction is being executed.</li>
+</ul>
+<p><figure><img src="/indirectcycle.png" height="200"/><figcaption>
+            <h4>The indirect instruction cycle</h4>
+        </figcaption>
+</figure>
+
+<figure><img src="/indirectcycle2.png" height="250"/><figcaption>
+            <h4>The indirect instruction cycle</h4>
+        </figcaption>
+</figure>
+</p>
+<h1 id="control-unit-design">Control unit design</h1>
+<p>2 types:</p>
+<ul>
+<li>Hardwired CU: is a combinatorial &lsquo;random logic&rsquo; circuit. Quickly transforms inputs to needed output signals, but is complex, inflexible, and requires a long design time.</li>
+<li>Microprogrammed: Uses a microprogrammed memory, which stores correspondances between inputs and outputs. Has it&rsquo;s own PC, IR, and micro memory addresses (aww! cute). Slower, but is easy to design and implement, and can be reprogrammed in case of a vulnerability being found.</li>
+</ul>
+<h1 id="microprogrammed-control">Microprogrammed control</h1>
+<ul>
+<li>Each machine instruction is encoded as a sequence of microinstructions.</li>
+<li>Writable control store allows for microcode changes and emulation of different processors.</li>
+<li>Horizontal / direct control (unpacked): very wide microinstruction length, few microinstructions per machine instruction, fewer instructions therefore higher speed.</li>
+<li>Vertical control (Packed / encoded field): Narrow width, n control signals stored in log_2(n) bits, limited parallelism, but less complex circuitry.</li>
+<li>In reality a compromise is found between them; control signals get divided into groups
+<figure><img src="/microinstructions.png" height="200"/><figcaption>
+            <h4>Microinstruction length vs number per machine instruction</h4>
+        </figcaption>
+</figure>
+</li>
+</ul>
+<h1 id="processor-performace-measures">Processor performace measures</h1>
+<ul>
+<li>Instruction bandwidth in MIPS: Millions of Instructions Per Second</li>
+<li>Speedup = execution time on sequential machine/execution time on parallel machine</li>
+<li>Processor utilisation = speedup with n cores/n cores</li>
+<li>Data bandwidth in MFLOPS</li>
+</ul>
+<h1 id="pipelining">Pipelining</h1>
+<ul>
+<li>Using interleaved memory can ease memory contention in pipelining.</li>
+<li>2 types of pipelining:
+<ul>
+<li>Asynchronous: Uses handshake signals. Each stage signals when ready, and next stage signals back when ready to receive information.</li>
+<li>Synchronous: One timing signal, determined by slowest stage. All data moves at once. Has registers between stages.</li>
+</ul>
+</li>
+</ul>
+<h2 id="pipeline-hazards">Pipeline hazards</h2>
+<ul>
+<li>Structural (resource conflicts): eg. 2 stages need to fetch from memory at the same time.
+<ul>
+<li>Solution: Use interleaved memory, fetch data together where possible giving more free memory time.</li>
+</ul>
+</li>
+<li>Control (procedural dependencies): Conditional branches stop us from prefetching instructions, since we don&rsquo;t know what the next instruction will be. Solutions:
+<ul>
+<li>Instruction pre-fetch buffers: Fetch both possible outcomes of the branch, select once path is known.</li>
+<li>Pipeline freeze: Don&rsquo;t admit any more instructions to the pipeline until branch resolved.</li>
+<li>Static prediction: Predict always either branch taken or not taken (decision hard wired)</li>
+<li>Dynamic prediction: On the fly prediction.
+<ul>
+<li>Branch instruction characteristics: Branch instruction indicates most likely way for the branch to go.</li>
+<li>Target address characteristics: Short / backward branches more likely to be taken, since they are characteristic of loops.</li>
+<li>Branch history: bits set or reset on outcome of execution are a good indicator of branch direction.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Data hazards: When one (faster) stage uses information modified by a (slower) stage.</li>
+</ul>
+<p>We can also pipeline execution units eg. adders to increase throughput.</p>
+<h1 id="reservation-tables-and-collision-vectors">Reservation tables and collision vectors</h1>
+<ul>
+<li>Initial collision vector derived from diagram.</li>
+<li>Count the distances between each pair in a row, and set the nth bit in the vector if there is a pair of that distance.
+<figure><img src="/spacetime.png" height="200"/><figcaption>
+            <h4>The initial collision vector here is 110011 (order 543210). 0 is always set.</h4>
+        </figcaption>
+</figure>
+</li>
+<li>Using this, we can create a state diagram, and reduce it to it&rsquo;s simple cycles.
+<figure><img src="/state.png" height="200"/><figcaption>
+            <h4>State diagram</h4>
+        </figcaption>
+</figure>
+
+<figure><img src="/state2.png" height="200"/><figcaption>
+            <h4>Simple state diagram</h4>
+        </figcaption>
+</figure>
+</li>
+<li>Greedy strategy: always taking initiations when C0 = 0.</li>
+<li>Average latency for a greedy cycle ≤ No. of 1s in initial collision vector.</li>
+<li>Minimum average latency ≥ Max. no of Xs in reservation table row.</li>
+<li>Average latency = average of simple cycle lengths</li>
+<li>We add delays to the reservation table based on maximum number of parallel processes allowed (defined by minimum average latency)</li>
+</ul>
+<blockquote>
+<p>I&rsquo;m actually not too sure how this works lol - Felix</p>
+</blockquote>
+<h1 id="superpipelining">Superpipelining</h1>
+<ul>
+<li>Some pipeline stages need less than half a clock cycle to execute</li>
+<li>We can douple the clock speed for them, getting double the throughput; this is superpiplining.</li>
+</ul>
+<h1 id="superscalar">Superscalar</h1>
+<ul>
+<li>Superscalar is fetching and decoding <em>more than one</em> instruction per cycle. This is achieved by having many functional units.</li>
+<li>σ = degree of superscalar. Avg. number of instructions issued cannot exceed σ.</li>
+<li>Uniform superscalar: Duplicate whole base pipeline.</li>
+<li>Non-uniform: Different amounts of different functional units.</li>
+<li>Superscalar allows for parallel fetch and decode operations.</li>
+<li>Speedup of superscalar processors is limited by instruction level parallelism.</li>
+</ul>
+<figure><img src="/superpipeline.png" height="400"/><figcaption>
+            <h4>Superpipelining vs Superscalar</h4>
+        </figcaption>
+</figure>
+
+<h2 id="superscalar-execution">Superscalar execution</h2>
+<ul>
+<li>Program to be executed consists of linear sequence of instructions</li>
+<li>Instruction fetch stage forms a dynamic stream of instructions, which are then dispatched into the window of execution</li>
+<li>Processor executes them according to data dependencies and hardware availability.</li>
+<li>Finally, results of instructions are put back into order. Speculative branches are removed if the sequential model determines they should not have occurred.</li>
+</ul>
+<h1 id="instruction-level-parallelism">Instruction level parallelism</h1>
+<h2 id="out-of-order-execution">Out of order execution</h2>
+<ul>
+<li>Significant types of instruction order: Fetch order, execution order, order of updating memory locations.
+3 main policies:</li>
+<li>In order issue, in order completion: wouldn&rsquo;t be considered for a modern system. Instructions issued in the same order as they are executed.</li>
+</ul>
+<figure><img src="/ii.png" height="200"/><figcaption>
+            <h4>In order issue, in order completion.</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>In order issue, out of order completion: Any number of instructions can be in execution stage at once, but issue still stalled by resource conflicts, true data dependency and procedural dependency. Decodes up to a point of conflict.</li>
+<li>Introduces output dependency: Instrustion B must wait for the result of Instruction 1 to start execution.</li>
+</ul>
+<figure><img src="/io.png" height="200"/><figcaption>
+            <h4>In order issue, out of order completion.</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Out of order issue, out of order completion: instruction window holds instructions after decoding, allowing processor to continue decoding during a conflict.</li>
+<li>Lets conflicting instructions begin execution, as long as they don&rsquo;t finish before instructions effected by the conflict have started (i.e. fetched operands).</li>
+<li>Introduces antidependency: Instruction B, which modifies variable V, cannot complete before Instruction A fetches the old value of V.</li>
+</ul>
+<figure><img src="/oo.png" height="200"/><figcaption>
+            <h4>Out of order issue, out of order completion.</h4>
+        </figcaption>
+</figure>
+
+<h2 id="register-renaming">Register renaming</h2>
+<ul>
+<li>Output dependency and antidependency can be treated like a resource conflict.</li>
+<li>We can solve this by duplicating the resource i.e. register renaming.</li>
+<li>Subsequent instructions accessing the duplicated register are changed to refer to the duplicate.</li>
+</ul>
+<p><a href="/posts/cs257-index/">All topics ⟶</a></p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					<li>
+						
+						<a href="/tags/cs257">CS257</a>
+						
+						<a href="/tags/architecture">Architecture</a>
+						
+						<a href="/tags/processor">Processor</a>
+						
+						<a href="/tags/pipelining">Pipelining</a>
+						
+						<a href="/tags/notes">Notes</a>
+						
+					</li>
+				</ul>
+			</nav>
+			
+			
+		</div>
+
+		
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/efbicief" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Felix B |  <a
+      href="https://github.com/efbicief/archie-efbicief">Archie Theme</a> (fork) | Made with ❤️ using <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

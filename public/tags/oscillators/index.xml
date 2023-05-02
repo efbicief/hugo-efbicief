@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oscillators on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/oscillators/</link>
+    <description>Recent content in Oscillators on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Fri, 10 Jun 2022 01:15:56 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/oscillators/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oscillators</title>
+      <link>https://git.fbcf.xyz/posts/es2c0-oscillators/</link>
+      <pubDate>Fri, 10 Jun 2022 01:15:56 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/es2c0-oscillators/</guid>
+      <description>Oscillators Consist of an amplifier A, and a frequency selective network β $$A_{cl}(jω)=\frac{v_o}{v_i}=\frac{A}{1-Aβ(jω)}$$ For oscillation to occur: $$Aβ=1\angle 0^{\circ}; |Aβ|=1, : A_{cl}(jω)\rightarrow\infty$$ 2 aspects of oscillators that we consider: Frequency of oscillation (ω0/f0) Gainloss (amplitude of β); to decide amplifier gain s.t. |Aβ|=1 Wien bridge Wien Bridge Oscillator V2 on diagram: use a potential divider s.t. $$v_2=\frac{Z_2}{Z_1+Z_2}, Z_1=R+\frac{1}{sC}, Z_2=R//\frac{1}{sC}=\frac{R}{1+sCR}$$ letting s=jω. v2 is the transfer function wrt. v1. Frequency of oscillation in a Wien bridge (frequency selective circuit β): $$ω_0=\frac{1}{CR}, f_0=\frac{1}{2\pi CR}$$ Gainloss: $$@ω_0=\frac{1}{CR}, β(jω)=\frac{1}{3};|Aβ|=1\implies A=3$$ Phase shift oscillator Phase Shift Oscillator The final opamp is inverting (phase shift=180deg), therefore the 3 RC networks before it must create a 180deg phase shift (60deg each) Transfer function of each CR network: $$\frac{v_o}{v_i}(jω)=\frac{R}{R+\frac{1}{jωC}}=\frac{jωCR}{1+jωCR}$$ Frequency of oscillation in a phase shift oscillator (frequency selective circuit β): s.</description>
+    </item>
+    
+  </channel>
+</rss>

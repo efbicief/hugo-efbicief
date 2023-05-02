@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dependability on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/dependability/</link>
+    <description>Recent content in Dependability on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Fri, 20 May 2022 03:53:24 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/dependability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dependability</title>
+      <link>https://git.fbcf.xyz/posts/cs261-dependability/</link>
+      <pubDate>Fri, 20 May 2022 03:53:24 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-dependability/</guid>
+      <description>Measuring reliability Probability of failure on demand Rate of errors Mean time to failure Availability Attributes of dependability Availability: Ready for use when envoked Reliability: Likelihood of providing service for a given period of time Safety: Operation without damaging or endangering environment Confidentiality: Nondisclosure of undue information Integrity: Endures improper alterations Maintainability: Probability of repair taking less than t time Systems may prioritise these differently, eg. pacemaker needs reliability &amp;gt; security.</description>
+    </item>
+    
+  </channel>
+</rss>

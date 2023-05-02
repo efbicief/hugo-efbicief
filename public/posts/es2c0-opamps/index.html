@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Opamps - Felix B</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Opamp attributes Inverting input v1, non-inverting input v2: $$v_2-v_1=0$$ $$v_o=A(v_2-v_1)$$ Ideal characteristics: A -&gt; infty Input currents -&gt; 0 Rin -&gt; intfy Rout -&gt; 0 Slewrate -&gt; infty Bandwidth -&gt; intfy Inverting amplifier Inverting amplifier $$A=\frac{v_o}{v_{in}}=\frac{-R_2}{R_1}$$
+Non-inverting amplifier Non-inverting amplifier $$A=\frac{v_o}{v_{in}}=1&#43;\frac{R_2}{R_1}$$
+Integrator Integrator $$v_o=\frac{-1}{RC}\int v_{in}dt$$
+Differentiator Differentiator Note: In this form, the circuit is not stabe, as high frequency noise can send it into oscillation $$v_o=-RC\frac{dv_{in}}{dt}$$ Inverting summer Inverting summer $$v_o=-[v_1(\frac{R_f}{R_1})&#43;v_2(\frac{R_f}{R_2})&hellip;]$$" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Opamps" />
+<meta property="og:description" content="Opamp attributes Inverting input v1, non-inverting input v2: $$v_2-v_1=0$$ $$v_o=A(v_2-v_1)$$ Ideal characteristics: A -&gt; infty Input currents -&gt; 0 Rin -&gt; intfy Rout -&gt; 0 Slewrate -&gt; infty Bandwidth -&gt; intfy Inverting amplifier Inverting amplifier $$A=\frac{v_o}{v_{in}}=\frac{-R_2}{R_1}$$
+Non-inverting amplifier Non-inverting amplifier $$A=\frac{v_o}{v_{in}}=1&#43;\frac{R_2}{R_1}$$
+Integrator Integrator $$v_o=\frac{-1}{RC}\int v_{in}dt$$
+Differentiator Differentiator Note: In this form, the circuit is not stabe, as high frequency noise can send it into oscillation $$v_o=-RC\frac{dv_{in}}{dt}$$ Inverting summer Inverting summer $$v_o=-[v_1(\frac{R_f}{R_1})&#43;v_2(\frac{R_f}{R_2})&hellip;]$$" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://git.fbcf.xyz/posts/es2c0-opamps/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-11T03:50:37+01:00" />
+<meta property="article:modified_time" content="2022-06-11T03:50:37+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Opamps"/>
+<meta name="twitter:description" content="Opamp attributes Inverting input v1, non-inverting input v2: $$v_2-v_1=0$$ $$v_o=A(v_2-v_1)$$ Ideal characteristics: A -&gt; infty Input currents -&gt; 0 Rin -&gt; intfy Rout -&gt; 0 Slewrate -&gt; infty Bandwidth -&gt; intfy Inverting amplifier Inverting amplifier $$A=\frac{v_o}{v_{in}}=\frac{-R_2}{R_1}$$
+Non-inverting amplifier Non-inverting amplifier $$A=\frac{v_o}{v_{in}}=1&#43;\frac{R_2}{R_1}$$
+Integrator Integrator $$v_o=\frac{-1}{RC}\int v_{in}dt$$
+Differentiator Differentiator Note: In this form, the circuit is not stabe, as high frequency noise can send it into oscillation $$v_o=-RC\frac{dv_{in}}{dt}$$ Inverting summer Inverting summer $$v_o=-[v_1(\frac{R_f}{R_1})&#43;v_2(\frac{R_f}{R_2})&hellip;]$$"/>
+<script src="https://git.fbcf.xyz/js/feather.min.js"></script>
+	
+	
+        <link href="https://git.fbcf.xyz/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://git.fbcf.xyz/css/main.46ba03325b5087e4bf8af8478b7cbcd704d0bbc30a81b70daa3b1f89234d557a.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://git.fbcf.xyz/css/dark.beec145b83af0d77445953d9c13ffa0b82ce322075bcd619e86b6afcafc1426f.css"  disabled />
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://git.fbcf.xyz/">Felix B</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/tags/project">Projects</a>
+		
+		<a href="/tags/blog">Blog Posts</a>
+		
+		<a href="/tags/index">Notes</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/tags">All Tags</a>
+		
+		| <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+		<script src="https://git.fbcf.xyz/js/themetoggle.js"></script>
+		
+	</nav>
+	
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Opamps</h1>
+			<div class="meta">Posted on Jun 11, 2022
+				
+				
+				
+			</div>
+		</div>
+
+		
+
+		<section class="body">
+			<h1 id="opamp-attributes">Opamp attributes</h1>
+<ul>
+<li>Inverting input v1, non-inverting input v2:
+$$v_2-v_1=0$$
+$$v_o=A(v_2-v_1)$$</li>
+<li>Ideal characteristics:
+<ul>
+<li>A -&gt; infty</li>
+<li>Input currents -&gt; 0</li>
+<li>Rin -&gt; intfy</li>
+<li>Rout -&gt; 0</li>
+<li>Slewrate -&gt; infty</li>
+<li>Bandwidth -&gt; intfy</li>
+</ul>
+</li>
+</ul>
+<h1 id="inverting-amplifier">Inverting amplifier</h1>
+<p><figure><img src="/inverting.png" height="150"/><figcaption>
+            <h4>Inverting amplifier</h4>
+        </figcaption>
+</figure>
+
+$$A=\frac{v_o}{v_{in}}=\frac{-R_2}{R_1}$$</p>
+<h1 id="non-inverting-amplifier">Non-inverting amplifier</h1>
+<p><figure><img src="/ninverting.png" height="150"/><figcaption>
+            <h4>Non-inverting amplifier</h4>
+        </figcaption>
+</figure>
+
+$$A=\frac{v_o}{v_{in}}=1+\frac{R_2}{R_1}$$</p>
+<h1 id="integrator">Integrator</h1>
+<p><figure><img src="/integrator.png" height="150"/><figcaption>
+            <h4>Integrator</h4>
+        </figcaption>
+</figure>
+
+$$v_o=\frac{-1}{RC}\int v_{in}dt$$</p>
+<h1 id="differentiator">Differentiator</h1>
+<figure><img src="/differentiator.png" height="150"/><figcaption>
+            <h4>Differentiator</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Note: In this form, the circuit is not stabe, as high frequency noise can send it into oscillation
+$$v_o=-RC\frac{dv_{in}}{dt}$$</li>
+</ul>
+<h1 id="inverting-summer">Inverting summer</h1>
+<p><figure><img src="/summer.png" height="200"/><figcaption>
+            <h4>Inverting summer</h4>
+        </figcaption>
+</figure>
+
+$$v_o=-[v_1(\frac{R_f}{R_1})+v_2(\frac{R_f}{R_2})&hellip;]$$</p>
+<h1 id="buffer">Buffer</h1>
+<p><figure><img src="/buffer.png" height="150"/><figcaption>
+            <h4>Buffer</h4>
+        </figcaption>
+</figure>
+
+$$v_o=v_{in}$$</p>
+<h1 id="low-pass-filter">Low pass filter</h1>
+<p><figure><img src="/lpass.png" height="200"/><figcaption>
+            <h4>Low pass</h4>
+        </figcaption>
+</figure>
+
+$$A(jω)=\frac{-Z_2}{Z_1}=\frac{-R_2/R_1}{1+jωCR_2}$$</p>
+<ul>
+<li>Limits tests
+$$@ω=0: A(jω)=\frac{-R_2}{R_1},@ω=\infty: A(jω)=0$$</li>
+<li>Cutoff
+$$ω_c=\frac{1}{CR_2}, f_c=\frac{1}{2\pi CR_2}$$</li>
+</ul>
+<h1 id="high-pass-filter">High pass filter</h1>
+<p><figure><img src="/hpass.png" height="150"/><figcaption>
+            <h4>High pass</h4>
+        </figcaption>
+</figure>
+
+$$A(jω)=\frac{-Z_2}{Z_1}=\frac{jωCR_2}{1+jωCR_1}$$</p>
+<ul>
+<li>Limits tests
+$$@ω=0: A(jω)=0,@ω=\infty: A(jω)=\frac{-R_2}{R_1}$$</li>
+<li>Cutoff
+$$ω_c=\frac{1}{CR_1}, f_c=\frac{1}{2\pi CR_1}$$</li>
+</ul>
+<h1 id="band-pass-filter">Band pass filter</h1>
+<p><figure><img src="/bpass.png" height="200"/><figcaption>
+            <h4>Band pass</h4>
+        </figcaption>
+</figure>
+
+$$A(jω)=\frac{-Z_2}{Z_1}=\frac{jωCR_2}{(1+jωCR_1)(1+jωCR_2)}$$</p>
+<ul>
+<li>Limits tests &amp; cutoff harder to determine (2nd order filter)</li>
+</ul>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					<li>
+						
+						<a href="/tags/es2c0">ES2C0</a>
+						
+						<a href="/tags/electronics">Electronics</a>
+						
+						<a href="/tags/opamp">Opamp</a>
+						
+						<a href="/tags/notes">Notes</a>
+						
+					</li>
+				</ul>
+			</nav>
+			
+			
+		</div>
+
+		
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/efbicief" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Felix B |  <a
+      href="https://github.com/efbicief/archie-efbicief">Archie Theme</a> (fork) | Made with ❤️ using <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

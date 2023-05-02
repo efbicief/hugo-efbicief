@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Parallelism on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/parallelism/</link>
+    <description>Recent content in Parallelism on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Tue, 07 Jun 2022 06:30:43 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/parallelism/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Parallel Computation</title>
+      <link>https://git.fbcf.xyz/posts/cs257-parallel-computation/</link>
+      <pubDate>Tue, 07 Jun 2022 06:30:43 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-parallel-computation/</guid>
+      <description>Flynn&amp;rsquo;s taxonomy Single Data stream Multiple Data stream Single Instruction SISD: &amp;ldquo;Regular&amp;rdquo; processor SIMD: Vectorisation Single Data MISD: Uncommon - n-version programming MIMD: Distributed systems More detail below. Flynn&amp;#39;s taxonomy MIMD Available as shared memory and distributed memory. Shared memory: Communicate via memory, easy to program. Distributed memory: Communication can be done between autonomous processors in software. Examples include Ethernet, Infiniband, etc. Communicates via message passing. Hardware interconnection structures allow processors to access memory and communicate with other processors.</description>
+    </item>
+    
+  </channel>
+</rss>

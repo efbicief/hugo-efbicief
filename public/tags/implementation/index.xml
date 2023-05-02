@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Implementation on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/implementation/</link>
+    <description>Recent content in Implementation on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Fri, 20 May 2022 02:32:22 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/implementation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Behavioural Patterns</title>
+      <link>https://git.fbcf.xyz/posts/cs261-behavioural-patterns/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-behavioural-patterns/</guid>
+      <description>SOLID design principles Single responsibility - a single class is responsible for each bit of functionality Open for extension, closed for modification - ie. extend a class to add new functionality, not edit the original Listov substitution (Behavioural subtyping) - Allow a child object to masquerade as it&amp;rsquo;s parent for all purporses Interface segregation - Have many specific interfaces, not a few overgeneralised ones Dependency inversion - Instead of making high-level classes depend on low-level ones, have them both depend on well-defined interfaces Behavioural Patterns Iterator Object which traverses a container to access it&amp;rsquo;s elements Allows containers to be accessed without exposing their inner workings Iterators can be defined for any data-containing structure Observer Allows dependent objects to &amp;ldquo;subscribe&amp;rdquo; to object state changes Dependents get notified that a state has changed, rather than forcing it to constantly poll for changes Memento Allows for undo/redo behaviour Keeps object &amp;ldquo;snapshots&amp;rdquo; in a caretaker object Caretaker can be accessed to restore snapshots later Strategy Methods to complete task implemented in seperate object Original context object doesn&amp;rsquo;t know details of strategies, just selects one to use Good example is a graph iterator - strategies can be implemented seperately (eg.</description>
+    </item>
+    
+    <item>
+      <title>Structural Patterns</title>
+      <link>https://git.fbcf.xyz/posts/cs261-structural-patterns/</link>
+      <pubDate>Fri, 20 May 2022 02:32:22 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-structural-patterns/</guid>
+      <description>Factory Wrapper for a constructor that builds an object instance in a single call Has methods that build parts of the object, and combines them together (eg. might have a wheel constructor, brakes constructor, frame constructor, saddle constructor, combines them together to make a bike) Can simplify code significantly: by extending the factory class, we can create another class which can call super methods and create variants on the factory&amp;rsquo;s output (eg.</description>
+    </item>
+    
+  </channel>
+</rss>

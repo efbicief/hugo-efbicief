@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Methodologies on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/methodologies/</link>
+    <description>Recent content in Methodologies on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Thu, 19 May 2022 09:37:41 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/methodologies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Methodologies</title>
+      <link>https://git.fbcf.xyz/posts/cs261-software-methodologies/</link>
+      <pubDate>Thu, 19 May 2022 09:37:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs261-software-methodologies/</guid>
+      <description>Two types: Plan-driven and Agile.
+All processes involve:
+Software specification - What the software should do Design and implementation - How it should be organised and implemented Validation - Checking it does what the customer asked Evolution - Changing the software over time Software specification Define which services are required and limitations of the system Idea: Create a document that anyone could use to build the system Stages of requirements engineering:</description>
+    </item>
+    
+  </channel>
+</rss>

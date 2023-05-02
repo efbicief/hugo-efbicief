@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Behavioural Patterns - Felix B</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="SOLID design principles Single responsibility - a single class is responsible for each bit of functionality Open for extension, closed for modification - ie. extend a class to add new functionality, not edit the original Listov substitution (Behavioural subtyping) - Allow a child object to masquerade as it&rsquo;s parent for all purporses Interface segregation - Have many specific interfaces, not a few overgeneralised ones Dependency inversion - Instead of making high-level classes depend on low-level ones, have them both depend on well-defined interfaces Behavioural Patterns Iterator Object which traverses a container to access it&rsquo;s elements Allows containers to be accessed without exposing their inner workings Iterators can be defined for any data-containing structure Observer Allows dependent objects to &ldquo;subscribe&rdquo; to object state changes Dependents get notified that a state has changed, rather than forcing it to constantly poll for changes Memento Allows for undo/redo behaviour Keeps object &ldquo;snapshots&rdquo; in a caretaker object Caretaker can be accessed to restore snapshots later Strategy Methods to complete task implemented in seperate object Original context object doesn&rsquo;t know details of strategies, just selects one to use Good example is a graph iterator - strategies can be implemented seperately (eg." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Behavioural Patterns" />
+<meta property="og:description" content="SOLID design principles Single responsibility - a single class is responsible for each bit of functionality Open for extension, closed for modification - ie. extend a class to add new functionality, not edit the original Listov substitution (Behavioural subtyping) - Allow a child object to masquerade as it&rsquo;s parent for all purporses Interface segregation - Have many specific interfaces, not a few overgeneralised ones Dependency inversion - Instead of making high-level classes depend on low-level ones, have them both depend on well-defined interfaces Behavioural Patterns Iterator Object which traverses a container to access it&rsquo;s elements Allows containers to be accessed without exposing their inner workings Iterators can be defined for any data-containing structure Observer Allows dependent objects to &ldquo;subscribe&rdquo; to object state changes Dependents get notified that a state has changed, rather than forcing it to constantly poll for changes Memento Allows for undo/redo behaviour Keeps object &ldquo;snapshots&rdquo; in a caretaker object Caretaker can be accessed to restore snapshots later Strategy Methods to complete task implemented in seperate object Original context object doesn&rsquo;t know details of strategies, just selects one to use Good example is a graph iterator - strategies can be implemented seperately (eg." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://git.fbcf.xyz/posts/cs261-behavioural-patterns/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-20T02:32:22+01:00" />
+<meta property="article:modified_time" content="2022-05-20T02:32:22+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Behavioural Patterns"/>
+<meta name="twitter:description" content="SOLID design principles Single responsibility - a single class is responsible for each bit of functionality Open for extension, closed for modification - ie. extend a class to add new functionality, not edit the original Listov substitution (Behavioural subtyping) - Allow a child object to masquerade as it&rsquo;s parent for all purporses Interface segregation - Have many specific interfaces, not a few overgeneralised ones Dependency inversion - Instead of making high-level classes depend on low-level ones, have them both depend on well-defined interfaces Behavioural Patterns Iterator Object which traverses a container to access it&rsquo;s elements Allows containers to be accessed without exposing their inner workings Iterators can be defined for any data-containing structure Observer Allows dependent objects to &ldquo;subscribe&rdquo; to object state changes Dependents get notified that a state has changed, rather than forcing it to constantly poll for changes Memento Allows for undo/redo behaviour Keeps object &ldquo;snapshots&rdquo; in a caretaker object Caretaker can be accessed to restore snapshots later Strategy Methods to complete task implemented in seperate object Original context object doesn&rsquo;t know details of strategies, just selects one to use Good example is a graph iterator - strategies can be implemented seperately (eg."/>
+<script src="https://git.fbcf.xyz/js/feather.min.js"></script>
+	
+	
+        <link href="https://git.fbcf.xyz/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://git.fbcf.xyz/css/main.46ba03325b5087e4bf8af8478b7cbcd704d0bbc30a81b70daa3b1f89234d557a.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://git.fbcf.xyz/css/dark.beec145b83af0d77445953d9c13ffa0b82ce322075bcd619e86b6afcafc1426f.css"  disabled />
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://git.fbcf.xyz/">Felix B</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/tags/project">Projects</a>
+		
+		<a href="/tags/blog">Blog Posts</a>
+		
+		<a href="/tags/index">Notes</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/tags">All Tags</a>
+		
+		| <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+		<script src="https://git.fbcf.xyz/js/themetoggle.js"></script>
+		
+	</nav>
+	
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Behavioural Patterns</h1>
+			<div class="meta">Posted on May 20, 2022
+				
+				
+				
+			</div>
+		</div>
+
+		
+
+		<section class="body">
+			<h1 id="solid-design-principles">SOLID design principles</h1>
+<ul>
+<li>Single responsibility - a single class is responsible for each bit of functionality</li>
+<li>Open for extension, closed for modification - ie. extend a class to add new functionality, not edit the original</li>
+<li>Listov substitution (Behavioural subtyping) - Allow a child object to masquerade as it&rsquo;s parent for all purporses</li>
+<li>Interface segregation - Have many specific interfaces, not a few overgeneralised ones</li>
+<li>Dependency inversion - Instead of making high-level classes depend on low-level ones, have them both depend on well-defined interfaces</li>
+</ul>
+<h1 id="behavioural-patterns">Behavioural Patterns</h1>
+<h2 id="iterator">Iterator</h2>
+<ul>
+<li>Object which traverses a container to access it&rsquo;s elements</li>
+<li>Allows containers to be accessed without exposing their inner workings</li>
+<li>Iterators can be defined for any data-containing structure</li>
+</ul>
+<h2 id="observer">Observer</h2>
+<ul>
+<li>Allows dependent objects to &ldquo;subscribe&rdquo; to object state changes</li>
+<li>Dependents get notified that a state has changed, rather than forcing it to constantly poll for changes</li>
+</ul>
+<h1 id="memento">Memento</h1>
+<ul>
+<li>Allows for undo/redo behaviour</li>
+<li>Keeps object &ldquo;snapshots&rdquo; in a caretaker object</li>
+<li>Caretaker can be accessed to restore snapshots later</li>
+</ul>
+<h1 id="strategy">Strategy</h1>
+<ul>
+<li>Methods to complete task implemented in seperate object</li>
+<li>Original context object doesn&rsquo;t know details of strategies, just selects one to use</li>
+<li>Good example is a graph iterator - strategies can be implemented seperately (eg. depth first, breadth first) and selected based on conditions of the graph at runtime</li>
+</ul>
+<p><a href="/posts/cs261-index/">All topics ⟶</a></p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					<li>
+						
+						<a href="/tags/cs261">CS261</a>
+						
+						<a href="/tags/software-engineering">Software Engineering</a>
+						
+						<a href="/tags/implementation">Implementation</a>
+						
+						<a href="/tags/patterns">Patterns</a>
+						
+						<a href="/tags/notes">Notes</a>
+						
+					</li>
+				</ul>
+			</nav>
+			
+			
+		</div>
+
+		
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/efbicief" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Felix B |  <a
+      href="https://github.com/efbicief/archie-efbicief">Archie Theme</a> (fork) | Made with ❤️ using <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

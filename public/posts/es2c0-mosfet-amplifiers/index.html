@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>MOSFET Amplifiers - Felix B</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="MOSFETs MOSFET MOSFET&rsquo;s drain, gate and source analogous to BJT collector, source and emitter
+MOSFET saturation mode analogous to BJT forward active mode k_n = transconduction constant, given to us (defined in terms of semiconductor geometry, etc), V_TN = threshold voltage MOSFET is in saturation if the following holds: $$V_{DS}&gt;V{DS(Sat)}(=V_{GS}-V_{TN})$$ $$V_{GS}&gt;V_{TN}$$ In this case: $$i_{D}=k_n(V_{GS}-V_{TN})^2$$ MOSFET is in linear region if the following holds: $$V_{DS}&lt;V{DS(Sat)}(=V_{GS}-V_{TN})$$ DC analysis Similar circuit to BJTs for biasing Voltage divider (Four Resistor) bias circuit (MOSFET) Consider: $$R_{Th}=R_1||R_2, V_{Th}=V_{DD}\frac{R_2}{R_1&#43;R_2}$$ If split power: $$V_{Th}=(V_{DD}-V_{EE})\frac{R_2}{R_1&#43;R_2}$$ In MOSFETs: $$I_G=0\therefore I_D=I_S$$ Unlike BJTs, V_GS isn&rsquo;t constant: $$i_D=k_n(V_{GS}-V_{TN})^2\therefore V_{GS}=\sqrt{i_D/k_n}&#43;V_{TN}$$ When analysing using Thévenin equivalent circuit of above, we can solve for (root) I_D: $$I_DR_S&#43;\frac{1}{\sqrt{k_n}}\sqrt{I_D}&#43;V_{TN}-V_{Th}=0$$ Quadratic yields 2 values for I_D - need to test which one is correct by applying the criteria for saturation as listed above and checking consistency AC analysis Small signal model for a MOSFET." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="MOSFET Amplifiers" />
+<meta property="og:description" content="MOSFETs MOSFET MOSFET&rsquo;s drain, gate and source analogous to BJT collector, source and emitter
+MOSFET saturation mode analogous to BJT forward active mode k_n = transconduction constant, given to us (defined in terms of semiconductor geometry, etc), V_TN = threshold voltage MOSFET is in saturation if the following holds: $$V_{DS}&gt;V{DS(Sat)}(=V_{GS}-V_{TN})$$ $$V_{GS}&gt;V_{TN}$$ In this case: $$i_{D}=k_n(V_{GS}-V_{TN})^2$$ MOSFET is in linear region if the following holds: $$V_{DS}&lt;V{DS(Sat)}(=V_{GS}-V_{TN})$$ DC analysis Similar circuit to BJTs for biasing Voltage divider (Four Resistor) bias circuit (MOSFET) Consider: $$R_{Th}=R_1||R_2, V_{Th}=V_{DD}\frac{R_2}{R_1&#43;R_2}$$ If split power: $$V_{Th}=(V_{DD}-V_{EE})\frac{R_2}{R_1&#43;R_2}$$ In MOSFETs: $$I_G=0\therefore I_D=I_S$$ Unlike BJTs, V_GS isn&rsquo;t constant: $$i_D=k_n(V_{GS}-V_{TN})^2\therefore V_{GS}=\sqrt{i_D/k_n}&#43;V_{TN}$$ When analysing using Thévenin equivalent circuit of above, we can solve for (root) I_D: $$I_DR_S&#43;\frac{1}{\sqrt{k_n}}\sqrt{I_D}&#43;V_{TN}-V_{Th}=0$$ Quadratic yields 2 values for I_D - need to test which one is correct by applying the criteria for saturation as listed above and checking consistency AC analysis Small signal model for a MOSFET." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://git.fbcf.xyz/posts/es2c0-mosfet-amplifiers/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-11T03:50:37+01:00" />
+<meta property="article:modified_time" content="2022-06-11T03:50:37+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MOSFET Amplifiers"/>
+<meta name="twitter:description" content="MOSFETs MOSFET MOSFET&rsquo;s drain, gate and source analogous to BJT collector, source and emitter
+MOSFET saturation mode analogous to BJT forward active mode k_n = transconduction constant, given to us (defined in terms of semiconductor geometry, etc), V_TN = threshold voltage MOSFET is in saturation if the following holds: $$V_{DS}&gt;V{DS(Sat)}(=V_{GS}-V_{TN})$$ $$V_{GS}&gt;V_{TN}$$ In this case: $$i_{D}=k_n(V_{GS}-V_{TN})^2$$ MOSFET is in linear region if the following holds: $$V_{DS}&lt;V{DS(Sat)}(=V_{GS}-V_{TN})$$ DC analysis Similar circuit to BJTs for biasing Voltage divider (Four Resistor) bias circuit (MOSFET) Consider: $$R_{Th}=R_1||R_2, V_{Th}=V_{DD}\frac{R_2}{R_1&#43;R_2}$$ If split power: $$V_{Th}=(V_{DD}-V_{EE})\frac{R_2}{R_1&#43;R_2}$$ In MOSFETs: $$I_G=0\therefore I_D=I_S$$ Unlike BJTs, V_GS isn&rsquo;t constant: $$i_D=k_n(V_{GS}-V_{TN})^2\therefore V_{GS}=\sqrt{i_D/k_n}&#43;V_{TN}$$ When analysing using Thévenin equivalent circuit of above, we can solve for (root) I_D: $$I_DR_S&#43;\frac{1}{\sqrt{k_n}}\sqrt{I_D}&#43;V_{TN}-V_{Th}=0$$ Quadratic yields 2 values for I_D - need to test which one is correct by applying the criteria for saturation as listed above and checking consistency AC analysis Small signal model for a MOSFET."/>
+<script src="https://git.fbcf.xyz/js/feather.min.js"></script>
+	
+	
+        <link href="https://git.fbcf.xyz/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://git.fbcf.xyz/css/main.46ba03325b5087e4bf8af8478b7cbcd704d0bbc30a81b70daa3b1f89234d557a.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://git.fbcf.xyz/css/dark.beec145b83af0d77445953d9c13ffa0b82ce322075bcd619e86b6afcafc1426f.css"  disabled />
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://git.fbcf.xyz/">Felix B</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/tags/project">Projects</a>
+		
+		<a href="/tags/blog">Blog Posts</a>
+		
+		<a href="/tags/index">Notes</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/tags">All Tags</a>
+		
+		| <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+		<script src="https://git.fbcf.xyz/js/themetoggle.js"></script>
+		
+	</nav>
+	
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">MOSFET Amplifiers</h1>
+			<div class="meta">Posted on Jun 11, 2022
+				
+				
+				
+			</div>
+		</div>
+
+		
+
+		<section class="body">
+			<h1 id="mosfets">MOSFETs</h1>
+<figure><img src="/mosfet.png" height="200"/><figcaption>
+            <h4>MOSFET</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>MOSFET&rsquo;s drain, gate and source analogous to BJT collector, source and emitter<br>
+MOSFET saturation mode analogous to BJT forward active mode</li>
+<li>k_n = transconduction constant, given to us (defined in terms of semiconductor geometry, etc), V_TN = threshold voltage</li>
+<li>MOSFET is in saturation if the following holds:
+$$V_{DS}&gt;V{DS(Sat)}(=V_{GS}-V_{TN})$$
+$$V_{GS}&gt;V_{TN}$$
+In this case:
+$$i_{D}=k_n(V_{GS}-V_{TN})^2$$</li>
+<li>MOSFET is in linear region if the following holds:
+$$V_{DS}&lt;V{DS(Sat)}(=V_{GS}-V_{TN})$$</li>
+</ul>
+<h1 id="dc-analysis">DC analysis</h1>
+<ul>
+<li>Similar circuit to BJTs for biasing</li>
+</ul>
+<figure><img src="/mosfet2.png" height="250"/><figcaption>
+            <h4>Voltage divider (Four Resistor) bias circuit (MOSFET)</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Consider:
+$$R_{Th}=R_1||R_2, V_{Th}=V_{DD}\frac{R_2}{R_1+R_2}$$
+If split power:
+$$V_{Th}=(V_{DD}-V_{EE})\frac{R_2}{R_1+R_2}$$</li>
+<li>In MOSFETs:
+$$I_G=0\therefore I_D=I_S$$</li>
+<li>Unlike BJTs, V_GS isn&rsquo;t constant:
+$$i_D=k_n(V_{GS}-V_{TN})^2\therefore V_{GS}=\sqrt{i_D/k_n}+V_{TN}$$</li>
+<li>When analysing using Thévenin equivalent circuit of above, we can solve for (root) I_D:
+$$I_DR_S+\frac{1}{\sqrt{k_n}}\sqrt{I_D}+V_{TN}-V_{Th}=0$$
+Quadratic yields 2 values for I_D - need to test which one is correct by applying the criteria for saturation as listed above and checking consistency</li>
+</ul>
+<h1 id="ac-analysis">AC analysis</h1>
+<p><figure><img src="/mosfetac1.png" height="230"/><figcaption>
+            <h4>Small signal model for a MOSFET.</h4>
+        </figcaption>
+</figure>
+
+<figure><img src="/mosfetac2.png" height="230"/><figcaption>
+            <h4>(Including bias resistors)</h4>
+        </figcaption>
+</figure>
+</p>
+<ul>
+<li><strong>Transconductance</strong> of the MOSFET:
+$$g_m=\frac{2I_{DQ}}{V_{GS}-V_{TN}}$$</li>
+<li>Input impedence @ gate
+$$R_{ig}=\infty$$
+Impedence @ ri
+$$R_i=R_{ig}||R_1||R_2=\infty||R_{Th}=R_{Th}$$
+Output impedence
+$$R_o=R_D$$
+(In a source follower):
+$$R_o=\frac{1}{g_m}$$</li>
+<li>Voltage in
+$$V_{in}=V_{gs}+g_mV_{gs}R_S$$
+Voltage out
+$$V_o=-g_mV_{gs}R_D$$
+Therefore: <strong>Voltage gain</strong>:
+$$A_v=\frac{V_o}{V_{in}}=\frac{-g_mV_{gs}R_D}{V_{gs}+g_mV_{gs}R_S}=\frac{-g_mR_D}{1+g_mR_S}$$
+Assuming g_mR_S &raquo; 1:
+$$A_v=\frac{-R_D}{R_S}$$
+&hellip;just like a BJT!</li>
+</ul>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					<li>
+						
+						<a href="/tags/es2c0">ES2C0</a>
+						
+						<a href="/tags/electronics">Electronics</a>
+						
+						<a href="/tags/mosfet">MOSFET</a>
+						
+						<a href="/tags/notes">Notes</a>
+						
+					</li>
+				</ul>
+			</nav>
+			
+			
+		</div>
+
+		
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/efbicief" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Felix B |  <a
+      href="https://github.com/efbicief/archie-efbicief">Archie Theme</a> (fork) | Made with ❤️ using <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

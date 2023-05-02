@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BJT on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/bjt/</link>
+    <description>Recent content in BJT on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Sat, 11 Jun 2022 03:50:37 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/bjt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BJT Amplifiers</title>
+      <link>https://git.fbcf.xyz/posts/es2c0-bjt-amplifiers/</link>
+      <pubDate>Sat, 11 Jun 2022 03:50:37 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/es2c0-bjt-amplifiers/</guid>
+      <description>BJTs NPN vs PNP BJTs Analogue design focuses on the forward-active mode of BJTs (B-E forward biased, C-B reverse biased) β is the common-emitter current gain, usually ~150 $$β=\frac{i_C}{i_B}, i_C=βi_B$$ $$i_E=i_B+i_C$$ α is the common-base current gain $$α=\frac{β}{β+1}, β=\frac{α}{1-α}$$ $$i_E=\frac{i_C}{α}$$ For a large β: $$α\approx 1$$ For a BJT (npn and pnp respectively), we take: $$v_{BE}=0.7v, v_{EB}=0.7v$$ DC analysis We want to set up a Q-point (quiescent) to a certain specification, we do this by setting resistor values Voltage divider (Four Resistor) bias circuit, and it&amp;#39;s Thevenin equivalent circuit Consider: $$R_{Th}=R_1||R_2, V_{Th}=V_{CC}\frac{R_2}{R_1+R_2}$$ If split power: $$V_{Th}=(V_{CC}-V_{EE})\frac{R_2}{R_1+R_2}$$ Using this Thévenin equivalent circuit: $$I_B=\frac{V_{Th}-V_{BE}}{R_{Th}+(1+β)R_E}$$ Stabilising I_C by design: we can choose a &amp;lsquo;small&amp;rsquo; R_Th i.</description>
+    </item>
+    
+  </channel>
+</rss>

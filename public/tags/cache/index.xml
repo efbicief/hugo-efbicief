@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cache on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/cache/</link>
+    <description>Recent content in Cache on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Mon, 06 Jun 2022 10:22:41 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/cache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Caches</title>
+      <link>https://git.fbcf.xyz/posts/cs257-caches/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-caches/</guid>
+      <description>We want to maximise cache hit ratio, i.e. amount of accesses where data is present in cache.
+Cache mapping Direct: Maps each block of main memory to one possible cache line. Means that if two bits of data are mapped to the same cache line, one must be swapped out. Associative: Any memory block can be stored in any cache line, but cache logic must then search through every cache line to check if something is in the cache.</description>
+    </item>
+    
+  </channel>
+</rss>

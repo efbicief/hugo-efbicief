@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimisation on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/optimisation/</link>
+    <description>Recent content in Optimisation on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Mon, 06 Jun 2022 10:22:41 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/optimisation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code Optimisation - Parallelisation</title>
+      <link>https://git.fbcf.xyz/posts/cs257-optimisation/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-optimisation/</guid>
+      <description>For this section of the notes, we will work through the following past question from the 2020 paper, using SIMD instructions.
+The simulate function below is taken from a compute intensive simulation program written in C. void simulate() { //Loop 1 for (int i = 0; i &amp;lt; N; i++) { ax[i] = 0.0f; ay[i] = 0.0f; az[i] = 0.0f; } //Loop 2 for (int i = 0; i &amp;lt; N; i++) { for (int j = 0; j &amp;lt; N; j++) { float rx = x[j] - x[i]; float ry = y[j] - y[i]; float rz = z[j] - z[i]; float r2 = rx*rx + ry*ry + rz*rz + eps; float r2inv = 1.</description>
+    </item>
+    
+    <item>
+      <title>Code Optimisation - Theory</title>
+      <link>https://git.fbcf.xyz/posts/cs257-optimisation-theory/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-optimisation-theory/</guid>
+      <description>Metrics Floating point operations per second Peak FLOPs: Maximum attainable, assuming no cost to memory operations. Peak GFLOPs = Clock speed (GHz) * Cores * FLOPs/cycle Speedup = unoptimised time / optimised time Optimisation approaches Algorithmic: Implementing a more efficient algorithm eg. using merge sort instead of bubble sort Code refactoring: Making changes to convince the compiler to apply optimisations. Removing interloop dependencies: Making a loop only rely on the current iteration can allow for parallelisation.</description>
+    </item>
+    
+    <item>
+      <title>Show Scheduler</title>
+      <link>https://git.fbcf.xyz/posts/show-scheduler/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/show-scheduler/</guid>
+      <description>Hello! This section hasn&amp;rsquo;t been written yet - sorry!</description>
+    </item>
+    
+    <item>
+      <title>Packet Capture</title>
+      <link>https://git.fbcf.xyz/posts/packet-capture/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/packet-capture/</guid>
+      <description>Hello! This section hasn&amp;rsquo;t been written yet - sorry!</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>BJT Amplifiers - Felix B</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="BJTs NPN vs PNP BJTs Analogue design focuses on the forward-active mode of BJTs (B-E forward biased, C-B reverse biased) β is the common-emitter current gain, usually ~150 $$β=\frac{i_C}{i_B}, i_C=βi_B$$ $$i_E=i_B&#43;i_C$$ α is the common-base current gain $$α=\frac{β}{β&#43;1}, β=\frac{α}{1-α}$$ $$i_E=\frac{i_C}{α}$$ For a large β: $$α\approx 1$$ For a BJT (npn and pnp respectively), we take: $$v_{BE}=0.7v, v_{EB}=0.7v$$ DC analysis We want to set up a Q-point (quiescent) to a certain specification, we do this by setting resistor values Voltage divider (Four Resistor) bias circuit, and it&#39;s Thevenin equivalent circuit Consider: $$R_{Th}=R_1||R_2, V_{Th}=V_{CC}\frac{R_2}{R_1&#43;R_2}$$ If split power: $$V_{Th}=(V_{CC}-V_{EE})\frac{R_2}{R_1&#43;R_2}$$ Using this Thévenin equivalent circuit: $$I_B=\frac{V_{Th}-V_{BE}}{R_{Th}&#43;(1&#43;β)R_E}$$ Stabilising I_C by design: we can choose a &lsquo;small&rsquo; R_Th i." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="BJT Amplifiers" />
+<meta property="og:description" content="BJTs NPN vs PNP BJTs Analogue design focuses on the forward-active mode of BJTs (B-E forward biased, C-B reverse biased) β is the common-emitter current gain, usually ~150 $$β=\frac{i_C}{i_B}, i_C=βi_B$$ $$i_E=i_B&#43;i_C$$ α is the common-base current gain $$α=\frac{β}{β&#43;1}, β=\frac{α}{1-α}$$ $$i_E=\frac{i_C}{α}$$ For a large β: $$α\approx 1$$ For a BJT (npn and pnp respectively), we take: $$v_{BE}=0.7v, v_{EB}=0.7v$$ DC analysis We want to set up a Q-point (quiescent) to a certain specification, we do this by setting resistor values Voltage divider (Four Resistor) bias circuit, and it&#39;s Thevenin equivalent circuit Consider: $$R_{Th}=R_1||R_2, V_{Th}=V_{CC}\frac{R_2}{R_1&#43;R_2}$$ If split power: $$V_{Th}=(V_{CC}-V_{EE})\frac{R_2}{R_1&#43;R_2}$$ Using this Thévenin equivalent circuit: $$I_B=\frac{V_{Th}-V_{BE}}{R_{Th}&#43;(1&#43;β)R_E}$$ Stabilising I_C by design: we can choose a &lsquo;small&rsquo; R_Th i." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://git.fbcf.xyz/posts/es2c0-bjt-amplifiers/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-11T03:50:37+01:00" />
+<meta property="article:modified_time" content="2022-06-11T03:50:37+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BJT Amplifiers"/>
+<meta name="twitter:description" content="BJTs NPN vs PNP BJTs Analogue design focuses on the forward-active mode of BJTs (B-E forward biased, C-B reverse biased) β is the common-emitter current gain, usually ~150 $$β=\frac{i_C}{i_B}, i_C=βi_B$$ $$i_E=i_B&#43;i_C$$ α is the common-base current gain $$α=\frac{β}{β&#43;1}, β=\frac{α}{1-α}$$ $$i_E=\frac{i_C}{α}$$ For a large β: $$α\approx 1$$ For a BJT (npn and pnp respectively), we take: $$v_{BE}=0.7v, v_{EB}=0.7v$$ DC analysis We want to set up a Q-point (quiescent) to a certain specification, we do this by setting resistor values Voltage divider (Four Resistor) bias circuit, and it&#39;s Thevenin equivalent circuit Consider: $$R_{Th}=R_1||R_2, V_{Th}=V_{CC}\frac{R_2}{R_1&#43;R_2}$$ If split power: $$V_{Th}=(V_{CC}-V_{EE})\frac{R_2}{R_1&#43;R_2}$$ Using this Thévenin equivalent circuit: $$I_B=\frac{V_{Th}-V_{BE}}{R_{Th}&#43;(1&#43;β)R_E}$$ Stabilising I_C by design: we can choose a &lsquo;small&rsquo; R_Th i."/>
+<script src="https://git.fbcf.xyz/js/feather.min.js"></script>
+	
+	
+        <link href="https://git.fbcf.xyz/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://git.fbcf.xyz/css/main.46ba03325b5087e4bf8af8478b7cbcd704d0bbc30a81b70daa3b1f89234d557a.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://git.fbcf.xyz/css/dark.beec145b83af0d77445953d9c13ffa0b82ce322075bcd619e86b6afcafc1426f.css"  disabled />
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://git.fbcf.xyz/">Felix B</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/tags/project">Projects</a>
+		
+		<a href="/tags/blog">Blog Posts</a>
+		
+		<a href="/tags/index">Notes</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/tags">All Tags</a>
+		
+		| <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+		<script src="https://git.fbcf.xyz/js/themetoggle.js"></script>
+		
+	</nav>
+	
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">BJT Amplifiers</h1>
+			<div class="meta">Posted on Jun 11, 2022
+				
+				
+				
+			</div>
+		</div>
+
+		
+
+		<section class="body">
+			<h1 id="bjts">BJTs</h1>
+<figure><img src="/npnpnp.png" height="200"/><figcaption>
+            <h4>NPN vs PNP BJTs</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Analogue design focuses on the forward-active mode of BJTs (B-E forward biased, C-B reverse biased)</li>
+<li>β is the common-emitter current gain, usually ~150
+$$β=\frac{i_C}{i_B}, i_C=βi_B$$
+$$i_E=i_B+i_C$$</li>
+<li>α is the common-base current gain
+$$α=\frac{β}{β+1}, β=\frac{α}{1-α}$$
+$$i_E=\frac{i_C}{α}$$
+For a large β:
+$$α\approx 1$$</li>
+<li>For a BJT (npn and pnp respectively), we take:
+$$v_{BE}=0.7v, v_{EB}=0.7v$$</li>
+</ul>
+<h1 id="dc-analysis">DC analysis</h1>
+<ul>
+<li>We want to set up a Q-point (quiescent) to a certain specification, we do this by setting resistor values</li>
+</ul>
+<figure><img src="/bjt4res.png" height="300"/><figcaption>
+            <h4>Voltage divider (Four Resistor) bias circuit, and it&#39;s Thevenin equivalent circuit</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Consider:
+$$R_{Th}=R_1||R_2, V_{Th}=V_{CC}\frac{R_2}{R_1+R_2}$$
+If split power:
+$$V_{Th}=(V_{CC}-V_{EE})\frac{R_2}{R_1+R_2}$$</li>
+<li>Using this Thévenin equivalent circuit:
+$$I_B=\frac{V_{Th}-V_{BE}}{R_{Th}+(1+β)R_E}$$</li>
+<li>Stabilising I_C by design: we can choose a &lsquo;small&rsquo; R_Th i.e.
+$$R_{Th}=\frac{βR_E}{10}$$
+This lets us simplify:
+$$I_C\approx I_E$$</li>
+</ul>
+<h1 id="ac-analysis">AC analysis</h1>
+<figure><img src="/hybridpi.png" height="230"/><figcaption>
+            <h4>Four resistor bias circuit transformed for AC analysis.</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Voltage form of the above:
+$$βI_b\implies g_mV_{be}$$</li>
+<li>To transform a circuit for AC analysis:
+<ul>
+<li>Replace capacitors with short circuits</li>
+<li>Replace DC volt sources with shorts to ground</li>
+<li>Replace the BJS with the hybrid π model shown above</li>
+</ul>
+</li>
+<li>V_T is the thermal voltage (assume =25mV), g_m is the <strong>transconductance</strong> of the BJT
+$$g_m=\frac{I_{CQ}}{V_T}=40I_{CQ}$$</li>
+<li>Internal resistance
+$$r_π=\frac{βV_T}{I_{CQ}}=\frac{β}{g_m}$$</li>
+<li>Input impedence @ base
+$$R_{ib}=\frac{V_{in}}{i_b}=r_π+R_E(1+β)$$
+Impedence @ ri
+$$R_i=R_{ib}||R_1||R_2=(r_π+R_E(1+β))||R_{Th}$$</li>
+<li>Voltage in
+$$V_{in}=i_bR_{ib}=i_b(r_π+R_E(1+β))$$
+Voltage out
+$$V_o=-βI_bR_C$$
+Therefore: <strong>Voltage gain</strong>:
+$$A_v=\frac{V_o}{V_{in}}=\frac{-βI_bR_C}{i_b(r_π+R_E(1+β))}=\frac{-βR_C}{R_E(1+β)}$$
+For large β:
+$$A_v=\frac{-R_C}{R_E}$$
+Note: negative sign implies 180° phase shift (inverting)</li>
+</ul>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					<li>
+						
+						<a href="/tags/es2c0">ES2C0</a>
+						
+						<a href="/tags/electronics">Electronics</a>
+						
+						<a href="/tags/bjt">BJT</a>
+						
+						<a href="/tags/notes">Notes</a>
+						
+					</li>
+				</ul>
+			</nav>
+			
+			
+		</div>
+
+		
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/efbicief" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Felix B |  <a
+      href="https://github.com/efbicief/archie-efbicief">Archie Theme</a> (fork) | Made with ❤️ using <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

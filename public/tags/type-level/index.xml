@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Type-level on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/type-level/</link>
+    <description>Recent content in Type-level on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Tue, 20 Dec 2022 09:19:33 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/type-level/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Type level arithmetic in Haskell</title>
+      <link>https://git.fbcf.xyz/posts/type-level-arithmetic/</link>
+      <pubDate>Tue, 20 Dec 2022 09:19:33 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/type-level-arithmetic/</guid>
+      <description>Seize two meaningless constants from the void, and imbue them with meaning. [&amp;hellip;] To birth an algebra into the world is a beautiful thing. - Kyle Kingsbury
+Type-level arithmetic in Haskell is an interesting and powerful concept that allows programmers to manipulate types as if they were numbers. While it may sound simple, just adding two numbers together at the type level can be a complex task that requires a deep understanding of Haskell&amp;rsquo;s type system.</description>
+    </item>
+    
+  </channel>
+</rss>

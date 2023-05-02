@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/c/</link>
+    <description>Recent content in C on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Mon, 06 Dec 2021 00:00:00 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Packet Capture</title>
+      <link>https://git.fbcf.xyz/posts/packet-capture/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/packet-capture/</guid>
+      <description>Hello! This section hasn&amp;rsquo;t been written yet - sorry!</description>
+    </item>
+    
+    <item>
+      <title>NotNo</title>
+      <link>https://git.fbcf.xyz/posts/notno/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/notno/</guid>
+      <description>Hello! This section hasn&amp;rsquo;t been written yet - sorry!</description>
+    </item>
+    
+  </channel>
+</rss>

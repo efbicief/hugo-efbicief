@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>System Design - Felix B</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="UML UML diagrams model aspects of our system.
+Structural diagrams illustrate objects, attributes, and operations. Profile, Class, Composite structure, Component, Deployment, Object and Package diagrams. Behavioural diagrams illustrate dynamic system behaviour. Activity, Use case, State machine, Sequence, Communication, Interaction overview and Timing diagrams. Context Model Points to systems our system interacts with.
+Context model UML Diagram Structural Diagrams Class Diagram Static structure of system objects.
+Class UML Diagram Symbol Meaning &#43; Public - Private # Protected / Derived _ Static ~ Package (for methods) Correct class diagrams Abstract classes&rsquo; names should be in italics Interface names should be prefixed with &lt;&lt;interface&gt;&gt; Do not include getters, setters or inherited methods." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="System Design" />
+<meta property="og:description" content="UML UML diagrams model aspects of our system.
+Structural diagrams illustrate objects, attributes, and operations. Profile, Class, Composite structure, Component, Deployment, Object and Package diagrams. Behavioural diagrams illustrate dynamic system behaviour. Activity, Use case, State machine, Sequence, Communication, Interaction overview and Timing diagrams. Context Model Points to systems our system interacts with.
+Context model UML Diagram Structural Diagrams Class Diagram Static structure of system objects.
+Class UML Diagram Symbol Meaning &#43; Public - Private # Protected / Derived _ Static ~ Package (for methods) Correct class diagrams Abstract classes&rsquo; names should be in italics Interface names should be prefixed with &lt;&lt;interface&gt;&gt; Do not include getters, setters or inherited methods." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://git.fbcf.xyz/posts/cs261-system-design/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-20T01:39:37+01:00" />
+<meta property="article:modified_time" content="2022-05-20T01:39:37+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="System Design"/>
+<meta name="twitter:description" content="UML UML diagrams model aspects of our system.
+Structural diagrams illustrate objects, attributes, and operations. Profile, Class, Composite structure, Component, Deployment, Object and Package diagrams. Behavioural diagrams illustrate dynamic system behaviour. Activity, Use case, State machine, Sequence, Communication, Interaction overview and Timing diagrams. Context Model Points to systems our system interacts with.
+Context model UML Diagram Structural Diagrams Class Diagram Static structure of system objects.
+Class UML Diagram Symbol Meaning &#43; Public - Private # Protected / Derived _ Static ~ Package (for methods) Correct class diagrams Abstract classes&rsquo; names should be in italics Interface names should be prefixed with &lt;&lt;interface&gt;&gt; Do not include getters, setters or inherited methods."/>
+<script src="https://git.fbcf.xyz/js/feather.min.js"></script>
+	
+	
+        <link href="https://git.fbcf.xyz/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://git.fbcf.xyz/css/main.46ba03325b5087e4bf8af8478b7cbcd704d0bbc30a81b70daa3b1f89234d557a.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://git.fbcf.xyz/css/dark.beec145b83af0d77445953d9c13ffa0b82ce322075bcd619e86b6afcafc1426f.css"  disabled />
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://git.fbcf.xyz/">Felix B</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/tags/project">Projects</a>
+		
+		<a href="/tags/blog">Blog Posts</a>
+		
+		<a href="/tags/index">Notes</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/tags">All Tags</a>
+		
+		| <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+		<script src="https://git.fbcf.xyz/js/themetoggle.js"></script>
+		
+	</nav>
+	
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">System Design</h1>
+			<div class="meta">Posted on May 20, 2022
+				
+				
+				
+			</div>
+		</div>
+
+		
+
+		<section class="body">
+			<h1 id="uml">UML</h1>
+<p>UML diagrams model aspects of our system.</p>
+<ul>
+<li>Structural diagrams illustrate objects, attributes, and operations.
+<ul>
+<li>Profile, Class, Composite structure, Component, Deployment, Object and Package diagrams.</li>
+</ul>
+</li>
+<li>Behavioural diagrams illustrate dynamic system behaviour.
+<ul>
+<li>Activity, Use case, State machine, Sequence, Communication, Interaction overview and Timing diagrams.</li>
+</ul>
+</li>
+</ul>
+<h1 id="context-model">Context Model</h1>
+<p>Points to systems our system interacts with.</p>
+<figure><img src="/contextmodel.png" height="200"/><figcaption>
+            <h4>Context model UML Diagram</h4>
+        </figcaption>
+</figure>
+
+<h1 id="structural-diagrams">Structural Diagrams</h1>
+<h2 id="class-diagram">Class Diagram</h2>
+<p>Static structure of system objects.</p>
+<figure><img src="/class.png" height="200"/><figcaption>
+            <h4>Class UML Diagram</h4>
+        </figcaption>
+</figure>
+
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Public</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Private</td>
+</tr>
+<tr>
+<td>#</td>
+<td>Protected</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Derived</td>
+</tr>
+<tr>
+<td>_</td>
+<td>Static</td>
+</tr>
+<tr>
+<td>~</td>
+<td>Package (for methods)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="correct-class-diagrams">Correct class diagrams</h3>
+<ul>
+<li>Abstract classes&rsquo; names should be in <em>italics</em></li>
+<li>Interface names should be prefixed with &lt;&lt;interface&gt;&gt;</li>
+<li><strong>Do not</strong> include getters, setters or inherited methods.</li>
+<li><strong>Do</strong> include interface methods</li>
+</ul>
+<p>Heirarchy: Draw arrow from child to parent class.</p>
+<table>
+<thead>
+<tr>
+<th>Pointing to</th>
+<th>Style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td>Black arrowhead</td>
+</tr>
+<tr>
+<td>Abstract Class</td>
+<td>White Arrowhead</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>White arrowhead, dotted line</td>
+</tr>
+</tbody>
+</table>
+<p>Association between classes.</p>
+<table>
+<thead>
+<tr>
+<th>Association</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aggregation (part of)</td>
+<td><figure><img src="/aggregation.png" height="70"/>
+</figure>
+</td>
+</tr>
+<tr>
+<td>Composition (made up of)</td>
+<td><figure><img src="/composition.png" height="70"/>
+</figure>
+</td>
+</tr>
+<tr>
+<td>Dependency (used temporarily)</td>
+<td><figure><img src="/dependency.png" height="70"/>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>In aggregation, one may exist without the other</li>
+<li>For composition, this is not true; stronger association</li>
+</ul>
+<p>Additionally, write 1 or * on associations to represent 1 to many etc. relations.</p>
+<h1 id="behavioural-diagrams">Behavioural Diagrams</h1>
+<h2 id="activity-diagram">Activity Diagram</h2>
+<p>Represents workflows of stepwise activities, like a flowchart.</p>
+<figure><img src="/activity.png" height="350"/><figcaption>
+            <h4>Activity UML Diagram</h4>
+        </figcaption>
+</figure>
+
+<h2 id="state-machine-diagram">State machine Diagram</h2>
+<p>System state transitions, like a finite state machine.</p>
+<figure><img src="/statemachine.png" height="250"/><figcaption>
+            <h4>State machine UML Diagram</h4>
+        </figcaption>
+</figure>
+
+<p>There is a correspondance between activity &amp; state machine diagrams. Actions in state machine corerspond to boxes in activity.</p>
+<h2 id="use-case-diagram">Use-case Diagram</h2>
+<p>Interactions of actors with events.</p>
+<figure><img src="/usecase.png" height="300"/><figcaption>
+            <h4>Use-case UML Diagram</h4>
+        </figcaption>
+</figure>
+
+<h2 id="sequence-diagram">Sequence Diagram</h2>
+<p>Communications between objects.</p>
+<figure><img src="/sequence.png" height="300"/><figcaption>
+            <h4>Sequence UML Diagram</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>A box represents an active object (i.e. running code)</li>
+<li>Nested boxes indicate recursion</li>
+<li>To make notes on a sequence diagram, draw a lil&rsquo; sticky note</li>
+</ul>
+<p>Object naming schemes:</p>
+<table>
+<thead>
+<tr>
+<th>Object type</th>
+<th>Naming scheme</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Named object</td>
+<td>Name:Class</td>
+<td>Smith:Patient</td>
+</tr>
+<tr>
+<td>Anonymous object</td>
+<td>:Class</td>
+<td>:Patient</td>
+</tr>
+<tr>
+<td>Object of unknown class</td>
+<td>Name</td>
+<td>Smith</td>
+</tr>
+</tbody>
+</table>
+<p><a href="/posts/cs261-index/">All topics ⟶</a></p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					<li>
+						
+						<a href="/tags/cs261">CS261</a>
+						
+						<a href="/tags/software-engineering">Software Engineering</a>
+						
+						<a href="/tags/design">Design</a>
+						
+						<a href="/tags/notes">Notes</a>
+						
+					</li>
+				</ul>
+			</nav>
+			
+			
+		</div>
+
+		
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/efbicief" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Felix B |  <a
+      href="https://github.com/efbicief/archie-efbicief">Archie Theme</a> (fork) | Made with ❤️ using <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

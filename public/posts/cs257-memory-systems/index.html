@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Memory Systems and Paging - Felix B</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Types of memory Static vs Dynamic Static RAM (SRAM): Flip-flop used to store each bit. Expensive but fairly simple. Dynamic RAM (DRAM): Capacitor used to store each bit, charge leaks away so refresh circuitry needed - increases complexity. Otherwise, generally cheaper once you have the refresh circuitry, so more common. Chip types Type Read/Write Volatility Random Access Memory (RAM) Electrically, at byte level Volatile Read Only Memory (ROM) Read only - written by mask at manufacture Non-volatile Programmable ROM (PROM) Read only - write once, electrically Non-volatile Erasable PROM (EPROM) Can erase whole chip with UV light, then rewrite Non-volatile Electrically Erasable PROM (EEPROM) Electrically erase whole chip, then rewrite Non-volatile Flash Memory Can erase each block and rewrite Non-volatile Advanced DRAM organisation Synchronous DRAM (SDRAM): Synchronously exchanges information with the processor on clock cycles." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Memory Systems and Paging" />
+<meta property="og:description" content="Types of memory Static vs Dynamic Static RAM (SRAM): Flip-flop used to store each bit. Expensive but fairly simple. Dynamic RAM (DRAM): Capacitor used to store each bit, charge leaks away so refresh circuitry needed - increases complexity. Otherwise, generally cheaper once you have the refresh circuitry, so more common. Chip types Type Read/Write Volatility Random Access Memory (RAM) Electrically, at byte level Volatile Read Only Memory (ROM) Read only - written by mask at manufacture Non-volatile Programmable ROM (PROM) Read only - write once, electrically Non-volatile Erasable PROM (EPROM) Can erase whole chip with UV light, then rewrite Non-volatile Electrically Erasable PROM (EEPROM) Electrically erase whole chip, then rewrite Non-volatile Flash Memory Can erase each block and rewrite Non-volatile Advanced DRAM organisation Synchronous DRAM (SDRAM): Synchronously exchanges information with the processor on clock cycles." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://git.fbcf.xyz/posts/cs257-memory-systems/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-06T10:22:41+01:00" />
+<meta property="article:modified_time" content="2022-06-06T10:22:41+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Memory Systems and Paging"/>
+<meta name="twitter:description" content="Types of memory Static vs Dynamic Static RAM (SRAM): Flip-flop used to store each bit. Expensive but fairly simple. Dynamic RAM (DRAM): Capacitor used to store each bit, charge leaks away so refresh circuitry needed - increases complexity. Otherwise, generally cheaper once you have the refresh circuitry, so more common. Chip types Type Read/Write Volatility Random Access Memory (RAM) Electrically, at byte level Volatile Read Only Memory (ROM) Read only - written by mask at manufacture Non-volatile Programmable ROM (PROM) Read only - write once, electrically Non-volatile Erasable PROM (EPROM) Can erase whole chip with UV light, then rewrite Non-volatile Electrically Erasable PROM (EEPROM) Electrically erase whole chip, then rewrite Non-volatile Flash Memory Can erase each block and rewrite Non-volatile Advanced DRAM organisation Synchronous DRAM (SDRAM): Synchronously exchanges information with the processor on clock cycles."/>
+<script src="https://git.fbcf.xyz/js/feather.min.js"></script>
+	
+	
+        <link href="https://git.fbcf.xyz/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://git.fbcf.xyz/css/main.46ba03325b5087e4bf8af8478b7cbcd704d0bbc30a81b70daa3b1f89234d557a.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://git.fbcf.xyz/css/dark.beec145b83af0d77445953d9c13ffa0b82ce322075bcd619e86b6afcafc1426f.css"  disabled />
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://git.fbcf.xyz/">Felix B</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/tags/project">Projects</a>
+		
+		<a href="/tags/blog">Blog Posts</a>
+		
+		<a href="/tags/index">Notes</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/tags">All Tags</a>
+		
+		| <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+		<script src="https://git.fbcf.xyz/js/themetoggle.js"></script>
+		
+	</nav>
+	
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Memory Systems and Paging</h1>
+			<div class="meta">Posted on Jun 6, 2022
+				
+				
+				
+			</div>
+		</div>
+
+		
+
+		<section class="body">
+			<h1 id="types-of-memory">Types of memory</h1>
+<h2 id="static-vs-dynamic">Static vs Dynamic</h2>
+<ul>
+<li>Static RAM (SRAM): Flip-flop used to store each bit. Expensive but fairly simple.</li>
+<li>Dynamic RAM (DRAM): Capacitor used to store each bit, charge leaks away so refresh circuitry needed - increases complexity. Otherwise, generally cheaper once you have the refresh circuitry, so more common.</li>
+</ul>
+<h2 id="chip-types">Chip types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Read/Write</th>
+<th>Volatility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random Access Memory (RAM)</td>
+<td>Electrically, at byte level</td>
+<td>Volatile</td>
+</tr>
+<tr>
+<td>Read Only Memory (ROM)</td>
+<td>Read only - written by mask at manufacture</td>
+<td>Non-volatile</td>
+</tr>
+<tr>
+<td>Programmable ROM (PROM)</td>
+<td>Read only - write once, electrically</td>
+<td>Non-volatile</td>
+</tr>
+<tr>
+<td>Erasable PROM (EPROM)</td>
+<td>Can erase whole chip with UV light, then rewrite</td>
+<td>Non-volatile</td>
+</tr>
+<tr>
+<td>Electrically Erasable PROM (EEPROM)</td>
+<td>Electrically erase whole chip, then rewrite</td>
+<td>Non-volatile</td>
+</tr>
+<tr>
+<td>Flash Memory</td>
+<td>Can erase each block and rewrite</td>
+<td>Non-volatile</td>
+</tr>
+</tbody>
+</table>
+<h2 id="advanced-dram-organisation">Advanced DRAM organisation</h2>
+<ul>
+<li>Synchronous DRAM (SDRAM): Synchronously exchanges information with the processor on clock cycles. Means the processor knows how many clock cycles to wait for communication, so can be busy while waiting.</li>
+<li>Rambus DRAM (RDRAM): Uses dedicated RDRAM bus rather than explicit R/W / chip enable signals to improve performance.</li>
+<li>Double data rate (DDR) SRAM: Data sent on both rising and falling edge of clock to double data rate.</li>
+<li>Cache DRAM (CDRAM): Small amount of SRAM with a larger DRAM to act as a cache for fetches, or a buffer to speed up accesses by prefetching DRAM -&gt; SRAM.</li>
+</ul>
+<h1 id="interleaved-memory">Interleaved memory</h1>
+<ul>
+<li>Multiple &lsquo;banks&rsquo; of memory units</li>
+<li>Each one can serve it&rsquo;s own r/w request, allowing for parallel accesses if data is in different banks</li>
+<li>Striping data across banks improves performance</li>
+</ul>
+<h1 id="virtual-memory">Virtual memory</h1>
+<ul>
+<li>Memory heirarchy: motivated by the designer&rsquo;s dilemma - we need low cost, high capacity and high performance memory, so we organise memory into a heirarchy to get the best of each type.</li>
+<li>Virtual memory: heirarchical memory system managed by the OS, presented to the programmer as a single contiguous memory.</li>
+<li>Allows programs to be independent of actual memory organisation, facilitates memory heirarchy.</li>
+</ul>
+<h1 id="paging">Paging</h1>
+<h2 id="page-tables">Page tables</h2>
+<ul>
+<li>Virtual memory addresses are split into (MSBs) page address, and (LSBs) line number.</li>
+<li>Page table contains entry for each page address, mapping to physical memory location and prescence bit. If prescence bit is 0, the page must be loaded into main memory.</li>
+<li>Line number used to index into location in physical memory.
+<figure><img src="/pagetable.png" height="350"/><figcaption>
+            <h4>Page table virtual address translation</h4>
+        </figcaption>
+</figure>
+</li>
+</ul>
+<h2 id="inverted-page-tables">Inverted page tables</h2>
+<ul>
+<li>1 entry for each physical memory frame</li>
+<li>Index in using hashed virtual page address, maps to either a physical frame address or another entry in the inverted page table</li>
+<li>If maps to another entry, follow the chain to the other entry</li>
+<li>In practice, best to have 2*no. of page frames entries in table.</li>
+<li><figure><img src="/invpagetable.png" height="300"/><figcaption>
+            <h4>Inverted page table</h4>
+        </figcaption>
+</figure>
+</li>
+</ul>
+<h2 id="translation-lookaside-buffer-tlb">Translation lookaside buffer (TLB)</h2>
+<ul>
+<li>&ldquo;Cache&rdquo; for addresses - holds most recently referenced table entries</li>
+<li>Removes overhead of searching main memory page tables on TLB hits</li>
+<li>TLB miss usually ≤0.01ish</li>
+</ul>
+<h2 id="page-sizes">Page sizes</h2>
+<ul>
+<li>The probability of two fetches being in the same page increases with page size - larger page sizes increase hit ratio</li>
+<li>However, large pages limit the number of pages we can store in cache - meaning fetches in different pages are more likely to incur a miss</li>
+<li>Therefore we get the following relationship between page size and hit ratio:
+<figure><img src="/pagesize.png" height="200"/><figcaption>
+            <h4>Relationship between page size and hit ratio</h4>
+        </figcaption>
+</figure>
+</li>
+</ul>
+<h2 id="page-replacement-algorithms">Page replacement algorithms</h2>
+<ul>
+<li>Random: keep random pages loaded. Poor performance.</li>
+<li>First in, first out (FIFO): Replace the page that has been in memory longest. No additional hardware required, but can unnessecarily unload frequently used pages.</li>
+<li>Clock replacement: Uses a &lsquo;use&rsquo; bit. On page fault, identifies earliest page. If use=1, set to 0. If already 0, replace the page. Use bit set to 1 on access of the page.</li>
+<li>Least recently used (LRU): Swaps out the least recently used page. Requires an age counter per entry.</li>
+<li>Working set: Pages not referenced in the preceding interval T get replaced. T can be tuned for performance.</li>
+</ul>
+<p><a href="/posts/cs257-index/">All topics ⟶</a></p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					<li>
+						
+						<a href="/tags/cs257">CS257</a>
+						
+						<a href="/tags/architecture">Architecture</a>
+						
+						<a href="/tags/memory">Memory</a>
+						
+						<a href="/tags/notes">Notes</a>
+						
+					</li>
+				</ul>
+			</nav>
+			
+			
+		</div>
+
+		
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/efbicief" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Felix B |  <a
+      href="https://github.com/efbicief/archie-efbicief">Archie Theme</a> (fork) | Made with ❤️ using <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS257 on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/cs257/</link>
+    <description>Recent content in CS257 on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Wed, 08 Jun 2022 11:49:23 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/cs257/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Embedded systems</title>
+      <link>https://git.fbcf.xyz/posts/cs257-embedded-systems/</link>
+      <pubDate>Wed, 08 Jun 2022 11:49:23 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-embedded-systems/</guid>
+      <description>Small systems dedicated to a particular task.
+Dependability Reliability(t): probability of system still working given it worked at t=0. Maintainability(d): probability of system working d time units after a fault occurred. Availability(t): Probability of system working at time t. Safety: No harm caused by system. Security: Communication kept confidential. Efficiency Must consider Code size, Runtime, Weight, Cost and Energy efficiency. Power and energy efficiency are particularly important - they tend to constrain embedded systems Minimising power important for PSU design, short term cooling, voltage regulation, etc.</description>
+    </item>
+    
+    <item>
+      <title>I/O and Secondary Storage</title>
+      <link>https://git.fbcf.xyz/posts/cs257-io-secondary-storage/</link>
+      <pubDate>Wed, 08 Jun 2022 11:49:23 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-io-secondary-storage/</guid>
+      <description>I/O Programmed I/O: CPU does all the work. 2 forms: Memory mapped I/O: I/O devices treated like memory, and sending / receiving data between them uses the same instructions as writing / reading to memory. Requires reserving memory space for I/O devices. Isolated I/O: Bus has seperate I/O read / write lines. Instructions specify whether an address is for I/O or main memory. Waiting for I/O devices to be ready takes a long time.</description>
+    </item>
+    
+    <item>
+      <title>Parallel Computation</title>
+      <link>https://git.fbcf.xyz/posts/cs257-parallel-computation/</link>
+      <pubDate>Tue, 07 Jun 2022 06:30:43 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-parallel-computation/</guid>
+      <description>Flynn&amp;rsquo;s taxonomy Single Data stream Multiple Data stream Single Instruction SISD: &amp;ldquo;Regular&amp;rdquo; processor SIMD: Vectorisation Single Data MISD: Uncommon - n-version programming MIMD: Distributed systems More detail below. Flynn&amp;#39;s taxonomy MIMD Available as shared memory and distributed memory. Shared memory: Communicate via memory, easy to program. Distributed memory: Communication can be done between autonomous processors in software. Examples include Ethernet, Infiniband, etc. Communicates via message passing. Hardware interconnection structures allow processors to access memory and communicate with other processors.</description>
+    </item>
+    
+    <item>
+      <title>Processor Architecture</title>
+      <link>https://git.fbcf.xyz/posts/cs257-processor-architecture/</link>
+      <pubDate>Tue, 07 Jun 2022 06:30:43 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-processor-architecture/</guid>
+      <description>Instruction cycle aka Fetch-decode-execute cycle
+Some instructions during the instruction cycle may require additional fetches. This makes the indirect cycle. We don&amp;rsquo;t always need to wait for an instruction to finish completely before fetching the next. Instructions can be prefetched during the idle memory cycle, when an instruction is being executed. The indirect instruction cycle The indirect instruction cycle Control unit design 2 types:
+Hardwired CU: is a combinatorial &amp;lsquo;random logic&amp;rsquo; circuit.</description>
+    </item>
+    
+    <item>
+      <title>Caches</title>
+      <link>https://git.fbcf.xyz/posts/cs257-caches/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-caches/</guid>
+      <description>We want to maximise cache hit ratio, i.e. amount of accesses where data is present in cache.
+Cache mapping Direct: Maps each block of main memory to one possible cache line. Means that if two bits of data are mapped to the same cache line, one must be swapped out. Associative: Any memory block can be stored in any cache line, but cache logic must then search through every cache line to check if something is in the cache.</description>
+    </item>
+    
+    <item>
+      <title>Code Optimisation - Parallelisation</title>
+      <link>https://git.fbcf.xyz/posts/cs257-optimisation/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-optimisation/</guid>
+      <description>For this section of the notes, we will work through the following past question from the 2020 paper, using SIMD instructions.
+The simulate function below is taken from a compute intensive simulation program written in C. void simulate() { //Loop 1 for (int i = 0; i &amp;lt; N; i++) { ax[i] = 0.0f; ay[i] = 0.0f; az[i] = 0.0f; } //Loop 2 for (int i = 0; i &amp;lt; N; i++) { for (int j = 0; j &amp;lt; N; j++) { float rx = x[j] - x[i]; float ry = y[j] - y[i]; float rz = z[j] - z[i]; float r2 = rx*rx + ry*ry + rz*rz + eps; float r2inv = 1.</description>
+    </item>
+    
+    <item>
+      <title>Code Optimisation - Theory</title>
+      <link>https://git.fbcf.xyz/posts/cs257-optimisation-theory/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-optimisation-theory/</guid>
+      <description>Metrics Floating point operations per second Peak FLOPs: Maximum attainable, assuming no cost to memory operations. Peak GFLOPs = Clock speed (GHz) * Cores * FLOPs/cycle Speedup = unoptimised time / optimised time Optimisation approaches Algorithmic: Implementing a more efficient algorithm eg. using merge sort instead of bubble sort Code refactoring: Making changes to convince the compiler to apply optimisations. Removing interloop dependencies: Making a loop only rely on the current iteration can allow for parallelisation.</description>
+    </item>
+    
+    <item>
+      <title>CS257 - Selected topics in ACA index</title>
+      <link>https://git.fbcf.xyz/posts/cs257-index/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-index/</guid>
+      <description>This is the index page for CS257 - Advanced Computer Architecture.
+Memory systems ⟶ Caches ⟶ Code optimisation (vectorisation) ⟶ Code optimisation (theory) ⟶ Processor architecture ⟶ Parallel computation ⟶ I/O &amp;amp; Secondary storage ⟶ Embedded systems ⟶ These notes are in no way comprehensive, but contain information that I think is most relevant to this module.
+These notes are available under the MIT License, so you can do pretty much whatever you want with it, as long as any modifications or redistributions include the linked notice.</description>
+    </item>
+    
+    <item>
+      <title>Memory Systems and Paging</title>
+      <link>https://git.fbcf.xyz/posts/cs257-memory-systems/</link>
+      <pubDate>Mon, 06 Jun 2022 10:22:41 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/cs257-memory-systems/</guid>
+      <description>Types of memory Static vs Dynamic Static RAM (SRAM): Flip-flop used to store each bit. Expensive but fairly simple. Dynamic RAM (DRAM): Capacitor used to store each bit, charge leaks away so refresh circuitry needed - increases complexity. Otherwise, generally cheaper once you have the refresh circuitry, so more common. Chip types Type Read/Write Volatility Random Access Memory (RAM) Electrically, at byte level Volatile Read Only Memory (ROM) Read only - written by mask at manufacture Non-volatile Programmable ROM (PROM) Read only - write once, electrically Non-volatile Erasable PROM (EPROM) Can erase whole chip with UV light, then rewrite Non-volatile Electrically Erasable PROM (EEPROM) Electrically erase whole chip, then rewrite Non-volatile Flash Memory Can erase each block and rewrite Non-volatile Advanced DRAM organisation Synchronous DRAM (SDRAM): Synchronously exchanges information with the processor on clock cycles.</description>
+    </item>
+    
+  </channel>
+</rss>

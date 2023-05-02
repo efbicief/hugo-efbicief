@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Featured on Felix B</title>
+    <link>https://git.fbcf.xyz/tags/featured/</link>
+    <description>Recent content in Featured on Felix B</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Felix B</copyright>
+    <lastBuildDate>Tue, 20 Dec 2022 09:19:33 +0100</lastBuildDate><atom:link href="https://git.fbcf.xyz/tags/featured/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Type level arithmetic in Haskell</title>
+      <link>https://git.fbcf.xyz/posts/type-level-arithmetic/</link>
+      <pubDate>Tue, 20 Dec 2022 09:19:33 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/type-level-arithmetic/</guid>
+      <description>Seize two meaningless constants from the void, and imbue them with meaning. [&amp;hellip;] To birth an algebra into the world is a beautiful thing. - Kyle Kingsbury
+Type-level arithmetic in Haskell is an interesting and powerful concept that allows programmers to manipulate types as if they were numbers. While it may sound simple, just adding two numbers together at the type level can be a complex task that requires a deep understanding of Haskell&amp;rsquo;s type system.</description>
+    </item>
+    
+    <item>
+      <title>MiniC Compiler</title>
+      <link>https://git.fbcf.xyz/posts/compiler-cswrk/</link>
+      <pubDate>Mon, 21 Nov 2022 10:05:57 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/compiler-cswrk/</guid>
+      <description>Hello! This section hasn&amp;rsquo;t been written yet - sorry!</description>
+    </item>
+    
+    <item>
+      <title>MentorMe</title>
+      <link>https://git.fbcf.xyz/posts/mentorme/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/mentorme/</guid>
+      <description>MentorMe is a platform that connects new employees with experienced mentors at their company. It was developed as a group project for CS261 - Software Engineering, and it consists of a backend API built with express.js, a web frontend built with react.js, and a database powered by Postgres.
+As part of the development team, I was responsible for the matching algorithm that connects users and mentors in the backend, as well as integrating the frontend elements with the backend API.</description>
+    </item>
+    
+    <item>
+      <title>Siege</title>
+      <link>https://git.fbcf.xyz/posts/siege/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/siege/</guid>
+      <description>Hello! This section hasn&amp;rsquo;t been written yet - sorry!</description>
+    </item>
+    
+    <item>
+      <title>Packet Capture</title>
+      <link>https://git.fbcf.xyz/posts/packet-capture/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/packet-capture/</guid>
+      <description>Hello! This section hasn&amp;rsquo;t been written yet - sorry!</description>
+    </item>
+    
+    <item>
+      <title>Scratch Clone</title>
+      <link>https://git.fbcf.xyz/posts/scratch-clone/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://git.fbcf.xyz/posts/scratch-clone/</guid>
+      <description>Hello! This section hasn&amp;rsquo;t been written yet - sorry!</description>
+    </item>
+    
+  </channel>
+</rss>
