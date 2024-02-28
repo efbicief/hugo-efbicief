@@ -1,4 +1,4 @@
-baseURL = 'https://git.fbcf.xyz/'
+baseURL = 'https://fbcf.xyz/'
 languageCode = 'en-us'
 title = 'Felix B'
 theme = 'archie-efbicief'
@@ -13,8 +13,8 @@ paginate=100 # articles per page
 [params]
 	mode="toggle" # color-mode → light,dark,toggle or auto
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-	subtitle = "Computer Systems Engineering student at the University of Warwick."
-  bio = "Hi! My name is Felix, I'm an undergraduate student at the University of Warwick, studying Computer Systems Engineering. I have experience with C++, Haskell, Python, C, JavaScript/React, Java, Bash, and more! I am also Tech Officer for Warwick Minecraft Society and Warwick Computing Society."
+	subtitle = "Platform Engineer at Quadrature"
+  bio = "Hi! My name is Felix 👋 \n\n I'm a `{platform,devops,systems,sre,internal cloud}` Engineer at Quadrature, working with `{kubernetes,argocd,docker,hashicorp stack,prometheus stack}`, `{linux,bash,salt stack}` and `{python,cpp,rust}`.\n\n I graduated from the `University of Warwick` with a BEng in `Computer Systems Engineering`. There, I was `Tech Officer` for Warwick Computing Society and Warwick Minecraft Society. \n\n I am interested in `{functional programming,types,electronics,fpga,electronic sound design}`."
 
 # Social Tags
 
@@ -22,6 +22,11 @@ paginate=100 # articles per page
 name = "GitHub"
 icon = "github"
 url = "https://github.com/efbicief"
+
+[[params.social]]
+name = "Mail"
+icon = "mail"
+url = "mailto:hello@fbcf.xyz"
 
 # Main menu Items
 
